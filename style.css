@@ -1,0 +1,4371 @@
+/*
+ Theme Name:   Being Boss 2018
+ Theme URI:    https://www.beingboss.club
+ Description:  Being Boss 2018
+ Author:       Corey Winter
+ Author URI:   http://www.beingboss.club
+ Template:     understrap
+ Version:      0.8.1
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  beingboss2018
+ Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
+*/
+
+
+
+/**********************
+	UNIVERSAL
+**********************/
+
+body {
+	font-family: 'PT Serif', serif;
+	color: #252525;
+	font-size: 16px;
+	line-height: 26px;
+}
+
+p {
+	font-size: 16px !important;
+	line-height: 26px !important;
+	padding-bottom: 20px;
+	margin-bottom: 0;
+}
+
+p:last-child {
+	padding-bottom: 0px !important;
+}
+
+.center {
+    	text-align: center;
+}
+
+.imgcenter {
+    	margin: 0px auto;
+    	display: table;
+}
+
+.content {
+    	text-align: left;
+}
+
+.right {
+    	text-align: right;
+}
+
+.left {
+    	text-align: left;
+}
+
+.floatleft {
+    	float: left;
+}
+
+.floatright {
+    	float: right;
+}
+
+.centeralign {
+	margin: 0 auto;
+}
+
+hr.short {
+	width: 140px;
+	margin: 15px auto 35px;
+	background: #252525;
+	height: 0px;
+}
+
+hr.even {
+	width: 140px;
+	margin: 30px auto 40px;
+	background: #252525;
+	height: 0px;
+}
+
+hr.short.white, hr.even.white {
+	background: #fff;
+}
+
+figure {
+	margin: 0;
+}
+
+.button, .buybutton, .button-yellow {
+	max-width: 85%;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	background-color: #252525;
+	border-radius: 10px;
+	font-family: brandon-grotesque, sans-serif;
+	font-size: 14px;
+	font-weight: 900;
+	padding: 10px 50px;
+	display: table;
+	border: 0;
+}
+
+.button-yellow {
+	background-color: #FFF200;
+	color: #252525;
+}
+
+.button-short {
+	padding: 5px 50px;
+}
+
+.buybutton {
+	background-color: #EAEAEA;
+	color: #252525;
+	margin: 10px auto;
+}
+
+.button:hover, .buybutton:hover, .button-yellow:hover {
+	background-color: #EC008C;
+	color: #fff;
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+}
+
+ul.grayarrow {
+	list-style: none !important;
+	margin: 0;
+	-webkit-padding-start: 0px
+}
+
+ul.grayarrow li {
+	padding: 0 0 15px 50px;
+	list-style: none!important;
+    	margin: 15px 0;
+    	background: url(/wp-content/themes/beingboss2018/img/Icon_Arrow_Gray.png) no-repeat;
+    	background-size: 30px;
+}
+
+#tve_editor input {
+	line-height: 1.3 !important;
+}
+
+#tve_editor button {
+	font-size: 18px !important;
+}
+
+@media screen and (max-width: 759px) {
+    body, p {
+	font-size: 18px !important;
+    }
+	
+}
+
+
+
+
+/*--------------------
+	BOOTSTRAP RESETS
+--------------------*/
+
+#full-width-page-wrapper .container-fluid, #shownote-wrapper .container-fluid, 
+#article-wrapper .container-fluid, #resource-wrapper .container-fluid, 
+#squeeze-wrapper .container-fluid, #webinar-wrapper .container-fluid, 
+#home-wrapper .container-fluid, #search-wrapper .container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#full-width-page-wrapper .container-fluid #primary.col-md-12, 
+#shownote-wrapper .container-fluid #primary.col-md-12, 
+#article-wrapper .container-fluid #primary.col-md-12, 
+#resource-wrapper .container-fluid #primary.col-md-12, 
+#squeeze-wrapper .container-fluid #primary.col-md-12,
+#webinar-wrapper .container-fluid #primary.col-md-12,
+#home-wrapper .container-fluid #primary.col-md-12, 
+#search-wrapper .container-fluid #primary.col-md-12 {
+	padding: 0;
+}
+
+
+/*--------------------
+	MOBILE RESETS
+---------------------*/
+
+.mobileshow {
+    display: none;
+}
+
+.mobilehide {
+	display: block;
+}
+
+@media screen and (max-width: 759px) {
+    .mobilehide {
+        display: none;
+    }
+    
+    .mobileshow {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 760px) and (max-width: 980px) {
+    .mobilehide {
+        display: none;
+    }
+    
+    .mobileshow {
+        display: block;
+    }
+}
+
+
+
+/*--------------------
+	MARGINS
+---------------------*/
+
+.nomargin {
+	margin: 0 !important;
+}
+
+.minusleftmargin125 {
+	margin-left: -125px;
+}
+
+.minusrightmargin125 {
+	margin-left: -125px;
+}
+
+.margintop30 {
+	margin-top: 30px;
+}
+
+.margintop50 {
+	margin-top: 50px;
+}
+
+.padtop15 {
+	padding-top: 15px;
+}
+
+.padbot0 {
+	padding-bottom: 0px !important;
+}
+
+.padbot30 {
+	padding-bottom: 30px !important;
+}
+
+.margin30 {
+	margin: 30px auto;
+}
+
+@media screen and (max-width: 980px) {
+	.minusleftmargin125, .minusrightmargin125 {
+		margin: 0 auto;
+	}
+	
+	.mobilemargintop {
+		margin-top: 50px;
+	}
+	
+}
+
+
+
+/*--------------------
+	COLOR CODES
+--------------------*/
+
+.black {
+	color: #252525;
+}
+
+.blue {
+	color: #00AEEF;
+}
+
+.pink {
+	color: #EC008C;
+}
+
+.yellow {
+	color: #FFF200;
+}
+
+.white {
+	color: #fff;
+}
+
+.lightgray {
+	color: #D3D3D3;
+}
+
+.gray {
+	color: #7C7C7C;
+}
+
+.darkgray {
+	color: #404040;
+}
+
+
+
+/**********************
+	TYPOGRAPHY
+**********************/
+
+strong, .bold, .strong {
+    font-weight: bold;
+}
+
+.lightweight, .light {
+	font-weight: 400;
+}
+
+b {
+    font-weight: bolder;
+}
+
+a {
+    color: #00AEEF;
+    text-decoration: none;
+}
+
+a.blacklink {
+	color: #252525;
+}
+
+a.whitelink {
+	color: #fff;
+}
+
+a:hover {
+    color: #BCBEC0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.blacklink:hover {
+	color: #00AEEF;
+}
+
+a.whitelink:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+a.underline {
+	text-decoration: underline;
+}
+
+a.underline:hover {
+	text-decoration: underline;
+}
+
+.italic {
+	font-style: italic !important;
+}
+
+h1, .h1 {
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	font-size: 24px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+h2, .h2 {
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	font-size: 21px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+h3, .h3 {
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+h4, .h4 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #7D7D7D;
+}
+
+h5, .h5 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.pullquote {
+	font-family: brandon-grotesque, sans-serif;
+	font-style: italic;
+	font-weight: 900;
+}
+
+.featured {
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 16px;
+	color: #D3D4D3;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.regular {
+	text-transform: none;
+}
+
+.weight400 {
+	font-weight: 400;
+}
+
+.weight600 {
+	font-weight: 600;
+}
+
+.weight900 {
+	font-weight: 900;
+}
+
+
+/*--------------------
+	SIZES
+--------------------*/
+
+.xsmall {
+	font-size: 10px !important;
+	line-height: 16px !important;
+}
+
+.small {
+	font-size: 12px !important;
+	line-height: 18px !important;
+}
+
+.mediumsmall {
+	font-size: 14px !important;
+	line-height: 20px !important;
+}
+
+.smallmedium {
+	font-size: 16px !important;
+	line-height: 24px !important;
+}
+
+.medium {
+	font-size: 18px !important;
+	line-height: 26px !important;
+}
+
+.gf_email .medium {
+	font-size: initial !important;
+    line-height: initial !important;
+}
+
+.xmedium {
+	font-size: 22px !important;
+	line-height: 30px !important;
+}
+
+.xxmedium {
+	font-size: 24px !important;
+	line-height: 30px !important;
+}
+
+.large {
+	font-size: 28px !important;
+	line-height: 34px !important;
+}
+
+.mlarge {
+	font-size: 30px !important;
+	line-height: 36px !important;
+}
+
+.xlarge {
+	font-size: 32px !important;
+	line-height: 40px !important;
+}
+
+.xxlarge {
+	font-size: 36px !important;
+	line-height: 46px !important;
+}
+
+.huge {
+	font-size: 50px !important;
+	line-height: 58px !important;
+}
+
+.xhuge {
+	font-size: 56px !important;
+	line-height: 1.3 !important;
+}
+
+.giant {
+	font-size: 64px !important;
+	line-height: 1.3 !important;
+}
+
+.lustbig {
+	font-size: 82px !important;
+	line-height: 1.2 !important;
+}
+
+@media screen and (max-width: 750px) {
+	.lustbig {
+		font-size: 50px !important;
+	}
+
+	.lustscript.huge { 
+		font-size: 38px !important;
+    		line-height: 1.3 !important;
+	}
+		
+}
+
+
+/*--------------------
+	FONTS
+--------------------*/
+
+.brandon {
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.helvetica {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.lust {
+	font-family: lust, serif;
+	font-weight: 400;
+}
+
+.lustscript {
+	font-family: "lust-script",sans-serif;
+}
+
+.serif {
+	font-family: 'PT Serif', serif !important;
+}
+
+
+
+
+
+/*********************
+	STRUCTURE
+*********************/
+
+#page-wrapper, #full-width-page-wrapper, #shownote-wrapper, #article-wrapper, #resource-wrapper, #squeeze-wrapper, #webinar-wrapper, #home-wrapper, #search-wrapper {
+	margin-top: 72px;
+}
+
+@media screen and (max-width: 550px) {
+	#page-wrapper, #full-width-page-wrapper, #shownote-wrapper, #article-wrapper, #resource-wrapper, #squeeze-wrapper, #webinar-wrapper, #home-wrapper, #search-wrapper {
+		margin-top: 80px;
+	}
+}
+
+
+@media screen and (min-width: 551px) and (max-width: 845px) {
+	#page-wrapper, #full-width-page-wrapper, #shownote-wrapper, #article-wrapper, #resource-wrapper, #squeeze-wrapper, #webinar-wrapper, #home-wrapper, #search-wrapper {
+		margin-top: 62px;
+	}
+}
+
+.wrapper {
+	padding: 0;
+}
+
+.pagesection15 {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.pagesection30 {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.pagesection50 {
+	padding-top: 50px;
+    	padding-bottom: 50px;
+}
+
+.pagesection60 {
+	padding-top: 60px;
+    	padding-bottom: 60px;
+}
+
+.pagesection80 {
+	padding-top: 80px;
+    	padding-bottom: 80px;
+}
+
+.capsule {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.paddingtop {
+	padding-top: 50px;
+}
+
+.paddingtop25 {
+	padding-top: 25px;
+}
+
+.paddingbottom {
+	padding-bottom: 50px;
+}
+
+.blacksection {
+	background: #252525;
+}
+
+.graysection {
+	background: #eaeaea;
+}
+
+.whitesection {
+	background: #fff;
+}
+
+.pageleft {
+	max-width: 48%;
+	float: left;
+}
+
+.pageright {
+	max-width: 48%;
+	float: right;
+}
+
+.colleft {
+	max-width: 48%;
+	margin: 0 auto auto 0;
+}
+
+.colright {
+	max-width: 48%;
+	margin: 0 0 auto auto;
+}
+
+.threecolumn {
+	width: 31%;
+	margin-right: 3%;
+	display: inline-block;
+	height: fit-content;
+}
+
+.threecolumn:last-of-type {
+	margin-right: 0;
+}
+
+.leafsection {
+	background: url('/wp-content/themes/beingboss2018/img/Back_Plant_1.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 50px 0;
+}
+
+.imagebackground {
+	background-size: cover;
+	background-position: center;
+	padding: 50px 0;
+}
+
+.alignparent {
+	position: relative;
+}
+
+.alignbottom {
+	position: absolute;
+	bottom: 0;
+}
+
+.responsive-iframe {
+    position: relative;
+	padding-bottom: 35.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+ 
+.responsive-iframe iframe {
+  	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.emilyandkathleendesktop {display: block;}
+
+.emilyandkathleenmobile {display: none;}
+
+.bctt-click-to-tweet {
+	margin-top: 15px;
+    	margin-bottom: 25px;
+}
+
+.bctt-ctt-text a {
+	font-family: 'PT Serif', serif !important;
+	font-style: italic;
+}
+
+
+button.tve-froala {
+	font-family: brandon-grotesque, sans-serif !important;
+	font-style: normal;
+	font-weight: 900 !important;
+	text-transform: uppercase;
+}
+
+.thrv_heading h1, .thrv_heading h2, .thrv_heading h3 {
+	    font-family: brandon-grotesque, sans-serif !important;
+    font-weight: 900 !important;
+}
+
+
+@media screen and (max-width: 1200px) {
+	
+	.emilyandkathleendesktop {display: none;}
+
+	.emilyandkathleenmobile {display: block;}
+}
+
+
+@media screen and (max-width: 980px) {
+	.pageleft, .pageright {
+		float: none;
+		width: 100%;
+		margin-bottom: 50px;
+		max-width: 100%;
+	}
+	
+	.threecolumn {
+		width: 100%;
+		margin: 0 0 25px;
+	}
+
+	.colleft, .colright {
+		max-width: 100%;
+		margin: 25px auto;
+	}
+	
+}
+
+@media screen and (max-width: 500px) {
+	.container {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+}
+
+
+
+/*********************
+	MENUS
+*********************/
+
+#wrapper-navbar {
+	max-height: 80px;
+}
+
+#wrapper-navbar .bg-light {
+	background-color: #fff !important;
+	border-bottom: 1px solid #eaeaea;
+}
+	
+
+@media screen and (min-width: 768px) {
+	.navbar-expand-md>.container, .navbar-expand-md>.container-fluid {
+		flex-wrap: wrap;
+	}
+
+}
+
+.ubermenu.ubermenu-main .ubermenu-item-level-0:hover {
+	background-image: url(/wp-content/themes/beingboss2018/img/Scribble.png) !important;
+    	background-size: 100%;
+    	background-repeat: no-repeat;
+    	background-position: center;
+}
+
+.ubermenu-skin-clean-white .ubermenu-item-level-0:hover > .ubermenu-target, .ubermenu-skin-clean-white .ubermenu-item-level-0.ubermenu-active > .ubermenu-target {
+	background: none !important;
+}
+
+.ubermenu .ubermenu-target-text {
+	font-family: brandon-grotesque, sans-serif !important;
+	font-style: normal;
+}
+
+
+#wrapper-navbar .navbar-brand {
+	width: 200px;
+}
+
+#wrapper-navbar .navbar-brand:hover img {
+	visibility: hidden;
+}
+
+#wrapper-navbar .navbar-brand:hover {
+	background-image: url('/wp-content/uploads/2018/04/Head_Logo_blue.svg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.navbar {
+	max-height: 72px;
+}
+
+.navbar-nav {
+	margin-left: auto !important;
+}
+
+.navbar-light .navbar-toggler {
+	background-color: #00abed;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: #252525;
+	font-family: brandon-grotesque, sans-serif !important;
+	font-weight: 900;
+	font-size: 15px;
+	padding-top: 6px;
+    	padding-bottom: 0px;
+    	height: 37px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    	padding-right: 8px;
+    	padding-left: 16px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	background-image: url(/wp-content/themes/beingboss2018/img/Scribble.png) !important;
+    	    background-size: 100% 39px;
+    	background-repeat: no-repeat;
+    	background-position: center;
+	color: #252525;
+}
+
+.dropdown-toggle::after {
+	display: none;
+}
+
+#main-menu.navbar-nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;
+    margin: 0;
+}
+
+.drawer-nav ul {
+	list-style-type: none;
+	-webkit-padding-start: 0px;
+}
+
+.drawer-nav ul li {
+	font-family: brandon-grotesque, sans-serif !important;
+	font-weight: 900;
+	font-size: 20px;
+}
+
+.drawer-nav ul li a {
+	color: #FFF;
+}
+
+.drawer-nav ul li a:hover {
+	color: #EC008C;
+}
+
+.topmenu {
+	display: flex; 
+	justify-content: flex-end;
+	position: relative;
+}
+
+.topmenu a {
+	font-family: brandon-grotesque, sans-serif !important;
+	font-weight: 400;
+	font-size: 13px;
+	color: #252525;
+	padding: 1px 15px 0 0;
+}
+
+.topmenu a:hover {
+	color: #00AEEF;
+}
+	
+
+
+@media screen and (max-width: 999px) {
+
+	#wrapper-navbar .bg-light {
+		height: 80px;
+		max-height: 80px;
+	}
+
+	.menuright {display: none;}
+	
+}
+
+@media screen and (min-width: 1000px) {
+	button.drawer-toggle.drawer-hamburger {display: none;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+	.navbar-expand-md .navbar-nav .nav-link {
+    		padding-right: 6px;
+    		padding-left: 6px;
+	}
+}
+
+
+
+
+.navbar-expand-md .navbar-nav .bb-special-dropdown:hover .dropdown-menu {
+	display: block;
+	width: 450px;
+	left: -180px;
+	text-align: center;
+	padding: 15px 0 25px;
+	box-shadow: 0 0 15px #888;
+	border-radius: 0;
+}
+
+.bb-special-dropdown li {
+	display: inline-block;
+	width: 48%;
+	text-align: center;
+}
+
+.navbar-light .navbar-nav .bb-special-dropdown .dropdown-menu .nav-link:hover {
+	background-image: none !important;
+	color: #00AEEF;
+}
+
+.bb-special-dropdown img {
+		border-radius: 0;
+		margin-right: 10px;
+		display: block;
+		width: 175px;
+		height: 175px;
+		margin: 0 auto 7px;
+}
+
+
+
+#main-menu-mobile .dropdown-menu {
+	position: relative;
+    top: unset;
+    left: 0;
+    z-index: 1000;
+    float: none;
+    min-width: 10rem;
+    padding: 0;
+    margin: 0;
+    color: unset;
+    text-align: left;
+    list-style: none;
+    background-color: transparent;
+    background-clip: unset;
+    border: 0;
+    border-radius: .25rem;
+}
+
+.drawer-nav #main-menu-mobile ul.dropdown-menu li {
+	padding-left: 15px;
+    font-size: 16px;
+}
+
+
+
+/*--------------------
+	SEARCH BAR
+--------------------*/
+
+
+#top-search input {
+	outline: none;
+}
+#top-search input::-webkit-search-decoration,
+#top-search input::-webkit-search-cancel-button {
+	display: none; 
+}
+
+#top-search input[type=search] {
+	background: url(/wp-content/themes/beingboss2018/img/Icon_Search.png) no-repeat 4px center;
+	background-size: 12px;	
+	padding: 0 8px 0 0;
+	border: none;
+	
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+
+	width: 15px;
+	color: transparent;
+	cursor: pointer;
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+#top-search input[type=search]:hover {
+	background-color: #fff;
+}
+#top-search input[type=search]:focus {
+	width: 130px;
+	padding-left: 32px;
+	color: #252525;
+	background-color: #eaeaea;
+	cursor: auto;
+	border: 1px solid #eaeaea;
+	position: absolute;
+	right: 0;
+}
+#top-search input:-moz-placeholder {
+	color: transparent;
+}
+#top-search input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+
+
+
+
+
+
+
+
+/*--------------------
+	FOOTER MENU
+--------------------*/
+
+ul#menu-footer-info, ul#menu-footer-content, ul#menu-footer-join-us {
+	padding: 0;
+	list-style-type: none;
+}
+
+#wrapper-footer a {
+	color: #fff;
+}	
+
+#wrapper-footer a:hover {
+	color: #FFF200;
+}
+
+
+
+/*********************
+	FOOTER
+*********************/
+
+#footer-subscribe {
+	margin-top: 125px;
+	background-image: url('/wp-content/themes/beingboss2018/img/BB_Footer_Subscribe.png');
+	background-size: cover;
+}
+
+.footer-subscribe-left {
+	position: relative;
+}
+
+.footer-subscribe-left img {
+	max-width: 250px;
+	position: absolute;
+	bottom: 0;
+}
+
+#footer-subscribe .pagesection {
+	padding-top: 50px;
+	padding-bottom: 40px;
+}
+
+#footer-subscribe button {
+
+	font-family: brandon-grotesque, sans-serif !important; 
+	font-weight: 900 !important;
+
+	max-width: 250px;
+    	display: block;
+    	margin: 3px auto;
+}
+
+#wrapper-footer {
+	background: #252525;
+	color: #fff;
+	font-size: 14px;
+}
+
+#wrapper-footer.wrapper {
+	padding: 50px 0;
+}
+
+#wrapper-footer h3 {
+	font-size: 16px;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 10px;
+	width: 100px;
+}
+
+#footer-social ul {
+	list-style: none;
+	-webkit-padding-start: 0;
+	margin-bottom: 0;
+}
+
+#footer-social li {
+	padding-right: 16px;
+	display: inline-block;
+}
+
+#footer-social li:last-of-type {
+	padding-right: 0;
+}
+
+.site-info {
+	text-align: right;
+}
+
+.site-info p {
+	font-size: 14px !important;
+}
+
+#squeeze-page .site-info {
+	padding-top: 0px;
+	text-align: center;
+}
+
+.bottom-row {
+	padding-top: 25px;
+	align-items: flex-end;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+	#footer-subscribe {
+		background-size: 100%;
+		margin-top: 50px;
+	}	
+
+	.footer-subscribe-left {
+		display: none;
+	}
+
+	.footer-subscribe-right p {
+		text-align: center;
+	}
+
+	#wrapper-footer h3 {
+		padding-top: 25px;
+	}
+
+	.site-info {
+		padding-top: 50px;
+		text-align: center;
+	}
+
+	.site-info p {
+		font-size: 14px !important;
+	}
+
+	.bottom-row {
+		padding-top: 0px;
+	}
+}
+
+
+
+/*********************
+	HOME
+*********************/
+
+#home-subscribe {
+	background-image: url('/wp-content/themes/beingboss2018/img/Home_SubscribeBack.jpg');
+	background-size: cover;
+    	height: auto;
+	width: 100%;
+	box-shadow: 0px 0px 10px 1px #888;
+	margin-top: -120px;
+}
+
+#home-subscribe img.iphone {
+	margin-top: -43px;
+}
+
+#home-subscribe p {
+	padding-bottom: 0px !important;
+}
+
+#home-wrapper .headersection {
+	background: url(/wp-content/themes/beingboss2018/img/HomeHeader.jpg);
+    	background-size: cover;
+    	background-position: 0px 0px;
+	background-attachment: fixed;
+    	width: 100%;
+    	height: 600px;
+    	display: table;
+}
+
+#home-wrapper .headersection .headertext {
+	position: absolute; 
+	top: 0; 
+	bottom: 0; 
+	right: 0; 
+	left: initial; 
+	margin: auto; 
+	display: table; 
+	text-align: right;
+}
+
+#home-wrapper .headersection .headertext .button-yellow {
+	float: right;
+}
+
+.thrv-leads-form-box.thrv_wrapper {
+	padding: 0 !important;
+	background: none !important;
+}
+
+p.featuredon {
+	text-align: center;
+	font-family: brandon-grotesque, sans-serif;
+	color: #D3D3D3;
+	font-weight: 900;
+	font-size: 16px;
+}
+
+a.carousel_link {
+	font-family: brandon-grotesque, sans-serif;
+	background: url('/wp-content/themes/beingboss2018/img/Scribble.png');
+	color: #252525;
+	background-size: 118px 39px;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	display: table;
+    	float: right;
+    	font-weight: 900;
+    	padding: 15px 0;
+}
+
+a.carousel_link:hover {
+	color: #00AEEF;
+}
+
+.carousel-title {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.home-book-section {
+	background: url('/wp-content/themes/beingboss2018/img/Home_BookBack.jpg'); 
+	background-size: cover; 
+	width: 100%; 
+	height: 300px; 
+	display: table; 
+	margin: 80px auto 15px;
+}
+
+.home-book-section .giant {
+	padding-top: 30px;
+}
+
+.home-book-section .col-md-4 {
+	margin-top: -75px;
+}
+
+.home-book-section .col-md-4 img {
+	margin: -75px auto -75px;
+    	float: right;
+    	max-width: 300px;
+}
+
+#home-wrapper p.bookpreorder {
+	padding-bottom: 5px;
+}
+
+#home-wrapper a.booklink {
+	font-size: 16px;
+	line-height: 1.3;
+}
+
+#home-book-top {
+	width: 100%; 
+	box-shadow: 0 0 15px #888;
+}
+
+#home-book-top p.home-book-left {
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	font-size: 26px !important;
+    line-height: 30px !important;
+    padding-bottom: 0px;
+}
+
+@media screen and (max-width: 599px) {
+	#home-wrapper .headersection {
+		background-position: -100px 0px;
+		background-attachment: unset;
+	}
+
+	#home-wrapper .headersection .headertext {
+		position: absolute;
+    		top: initial;
+    		bottom: 100px;
+    		right: 0;
+    		left: 0;
+    		margin: auto;
+    		display: block;
+    		text-align: center;
+	}
+
+	#home-wrapper .headersection .headertext .button-yellow {
+		float: none;
+	}
+
+	#home-wrapper .headersection .headertext .huge {
+		font-size: 30px !important;
+		line-height: 1.3 !important;
+	}
+
+	.home-book-section {
+		height: auto;
+		padding: 0;
+		    background-position: right;
+	}
+
+	.home-book-section .giant {
+		font-size: 48px !important;
+		padding-top: 0;
+	}
+
+	.home-book-section .col-md-4 {
+		margin-top: 0;
+		margin-bottom: 50px;
+	}
+
+	.home-book-section .col-md-4 img {
+		margin: 25px auto 0;
+    		float: none;
+    		display: block;
+    		width: 250px;
+    		max-width: 100%;
+	}
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+
+	#home-wrapper .headersection {
+		background-position: top left;
+		    background-attachment: unset;
+	}
+
+	.home-book-section {
+		height: auto;
+		padding: 0;
+		    background-position: right;
+	}
+
+
+	.home-book-section .giant {
+		font-size: 48px !important;
+		padding-top: 0;
+	}
+
+	.home-book-section .col-md-4 {
+		margin-top: 25px;
+		margin-bottom: 50px;
+	}
+
+
+	.home-book-section .col-md-4 img {
+		margin: 0 auto;
+    		float: none;
+    		display: block;
+    		width: 250px;
+    		max-width: 100%;
+	}
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 849px) {
+	#home-wrapper .headersection {
+		height: 500px;
+		background-position: top center;
+		    background-attachment: unset;
+	}
+
+	#home-wrapper .relatedpostbox {
+		width: 200px;
+	}
+
+	.home-book-section {
+		height: auto;
+		padding: 50px 0;
+		    background-position: right;
+	}
+	
+	.home-book-section .giant {
+		font-size: 44px !important;
+		padding-top: 0;
+	}
+
+	.home-book-section .col-md-4 {
+		margin-top: 25px;
+		margin-bottom: 50px;
+	}
+
+	.home-book-section .col-md-4 img {
+		max-width: 100%;
+	}
+
+	.home-book-section a.button {
+		margin: 25px auto 0;
+	}
+
+	#home-wrapper p.bookpreorder.xmedium, #home-wrapper a.booklink {
+		font-size: 16px !important;
+		line-height: 1.3 !important;
+		width: 70%;
+	}
+
+}
+
+
+@media screen and (min-width: 850px) and (max-width: 994px) {
+	#home-wrapper .headersection {
+		height: 400px;
+		    background-attachment: unset;
+	}
+
+	#home-wrapper .relatedpostbox {
+		width: 200px;
+	}
+
+	.home-book-section {
+		height: auto;
+		padding: 50px 0;
+	}
+	
+	.home-book-section .giant {
+		font-size: 44px !important;
+		padding-top: 0;
+	}
+
+	.home-book-section .col-md-4 {
+		margin-top: 25px;
+		margin-bottom: 50px;
+	}
+
+	.home-book-section .col-md-4 img {
+		max-width: 100%;
+	}
+
+	.home-book-section a.button {
+		margin: 25px auto 0;
+	}
+
+	#home-wrapper p.bookpreorder.xmedium, #home-wrapper a.booklink {
+		font-size: 16px !important;
+		line-height: 1.3 !important;
+		width: 70%;
+	}
+		
+}
+
+
+@media screen and (min-width: 995px) and (max-width: 1200px) {
+	#home-wrapper .headersection {
+		height: 400px;
+		    background-attachment: unset;
+	}
+
+	#home-wrapper .relatedpostbox {
+		width: 250px;
+	}
+
+	.home-book-section .giant {
+		font-size: 54px !important;
+	}
+
+	.home-book-section .col-md-4 img {
+		max-width: 100%;
+	}
+
+	.home-book-section a.button {
+		margin: 25px auto 0;
+	}
+
+	#home-wrapper p.bookpreorder.xmedium, #home-wrapper a.booklink {
+		font-size: 16px !important;
+		line-height: 1.3px !important;
+	}
+
+	#home-book-top {
+		padding-top: 30px;
+	}
+
+}
+
+@media screen and (min-width: 1201px) {
+	#home-wrapper .bbpage-header.book-landing .headertext img.bookimage {
+		max-width: 325px;
+	}
+}
+
+
+@media screen and (max-width: 1200px) {
+
+	#home-book-top {
+		padding-top: 50px;
+	}
+
+	#home-book-top p.home-book-left {
+		text-align: center;
+		padding-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	#home-book-top {
+		padding-top: 0px;
+	}
+}
+
+
+
+
+
+/*********************
+	PAGE
+*********************/
+
+/*--------------------
+	FULL WIDTH - HEADER
+--------------------*/
+
+.bbpage-header {
+	width: 100%;
+	height: 350px;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+}
+
+.bbpage-header .container {
+    	height: 100%;
+	position: relative;
+}
+
+.bbpage-header .headertext {
+	width: 90%;
+    	left: 0;
+    	margin: auto;
+    	top: 0;
+    	bottom: 0;
+   	display: table;
+    	right: 0;
+	position: absolute;
+}
+
+
+
+
+
+
+
+/*********************
+	CONTENT PARTS
+*********************/
+
+/*------EPISODE LIST---------*/
+
+.episodelist {
+	width: 100%;
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.episodelist.downloads {
+	margin: 0;
+}
+
+
+.episodelist .episodeitem {
+	border-bottom: 1px solid #BCBEC0;
+	padding: 15px 0;
+	font-size: 16px;
+}
+
+.episodelist .episodeitem img {
+	height: 25px;
+    padding-right: 20px;
+}
+
+.episodelist .episodeitem a {
+	color: #252525;
+}
+
+.episodelist .episodeitem .itemleft {
+	float: left;
+}
+
+.episodelist .episodeitem a:hover {
+	color: #EC008C;
+}
+
+.episodelist .episodeitem .downloadbutton {
+	float: right;
+}
+
+.episodelist .episodeitem .downloadbutton img {
+	width: auto;
+	height: auto;
+	padding: 0;
+	margin-top: -7px;
+}
+
+
+
+
+/*------TESTIMONIAL BOXES---------*/
+
+.innerbox {
+	padding: 30px;
+}
+
+
+
+
+/*------BOOK PAGE---------*/
+
+.bbpage-header.book-landing {
+	background-position: 0px 0px;
+    background-attachment: fixed;
+    height: 600px;
+}
+
+.bbpage-header.book-landing .headertext {
+	width: 415px;
+    right: 10px;
+    margin: 0 0 0 auto;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    display: table;
+    position: absolute;
+    text-align: right;
+}
+
+.bbpage-header.book-landing .headertext .flag {
+	background-image: url(/wp-content/uploads/2018/02/Header_Flag.png);
+	background-repeat: no-repeat;
+    width: 406px;
+    height: 202px;
+    text-align: center;
+    float: right;
+    padding-top: 30px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.bookpodcastsection {
+	background: url('/wp-content/themes/beingboss2018/img/PodcastImage_BookPage.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 100px 0;
+}
+
+img.bookimage {
+	margin-top: -400px;
+}
+
+.bbpage-header.book-landing .headertext img.bookimage {
+	margin-top: 0;
+	max-width: 300px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+}
+
+.bookpage .button, .bookpage .buybutton, .bookpage .button-yellow {
+    max-width: 185px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background-color: #252525;
+    border-radius: 10px;
+    font-family: brandon-grotesque, sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 10px 50px;
+    display: table;
+}
+
+.bookpage .buybutton {
+    max-width: 100%;
+    background-color: #EAEAEA;
+    color: #252525;
+    margin: 5px auto;
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px 20px;
+    width: 100%;
+    line-height: 1.3;
+    height: auto;
+    vertical-align: middle;
+}
+
+.bookpage .button:hover, .bookpage .buybutton:hover, .bookpage .button-yellow:hover {
+    background-color: #EC008C;
+    color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+	.bbpage-header.book-landing .headertext {
+		    width: 100%;
+		    right: 0;
+		    margin: 0 auto auto;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    display: table;
+		    position: relative;
+		    text-align: center;
+	}
+
+	.bbpage-header.book-landing .headertext .flag {
+		    background-size: 100%;
+		    width: 100%;
+		    height: 200px;
+		    text-align: center;
+		    float: none;
+		    padding-top: 15px;
+		    padding-bottom: 30px;
+		    font-size: 20px;
+		    line-height: 1.5;
+		    max-width: 100%;
+		    display: block;
+		    margin: 0 auto;
+	}
+
+	.bbpage-header.book-landing .headertext img.bookimage {
+		    margin-top: 0;
+		    width: 300px;
+		    max-width: 75%;
+		    text-align: center;
+		    display: block;
+		    margin: 0 auto;
+		}
+}
+
+@media screen and (min-width: 501px) and (max-width: 979px) {
+	.bbpage-header.book-landing {
+		background-attachment: unset;
+	}
+
+	.bbpage-header.book-landing .headertext {
+		    width: 415px;
+		    right: 0;
+		    margin: 0 auto;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    display: table;
+		    position: absolute;
+		    text-align: center;
+	}
+
+	.bbpage-header.book-landing .headertext .flag {
+		    background-size: auto;
+		    width: 100%;
+		    height: 200px;
+		    text-align: center;
+		    float: none;
+		    padding-top: 30px;
+		    padding-bottom: 30px;
+		    font-size: 24px;
+		    line-height: 1.5;
+		    max-width: 100%;
+		    display: block;
+		     margin: 0 auto;
+	}
+}
+
+
+@media screen and (max-width: 980px) {
+	img.bookimage {
+		    margin-top: 25px;
+    			margin-bottom: 25px;
+    			max-width: 75%;
+	}
+
+	.bbpage-header.book-landing {
+		    background-image: url(/wp-content/uploads/2018/02/Back_Smoke_1.jpg) !important;
+		    background-position: center !important;
+	}
+
+}
+
+
+
+/*------KIT DOWNLOAD SECTION---------*/
+	
+#downloadkit {
+	margin-top: 100px;
+	background-image: url('/wp-content/themes/beingboss2018/img/Fullwidth_Download_BG.png');
+	background-size: cover;
+}
+
+#downloadkit .pagesection {
+	padding-top: 60px;
+	padding-bottom: 50px;
+}
+
+#downloadkit .button {
+	margin: 80px auto 50px;
+}
+
+@media screen and (max-width: 980px) {
+	#downloadkit {
+		margin-top: 0;
+	}
+	
+	#downloadkit .button {
+		margin: 0 auto 50px;
+	}
+	
+}
+
+
+
+/* -----------LIBRARY PAGE--------------------*/
+
+.libraryvideo {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 0;
+	height: 0;
+}
+.libraryvideo iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.libraryleft {
+	float: left; width: 45%;
+}
+
+.libraryright {
+	float: right; width: 50%; padding: 50px 0 0;
+}
+
+.button.pink {
+        background: #EC008C !important;
+    	color: #fff;
+    	font-size: 14px;
+    	font-weight: 900;
+    	width: 200px;
+    	text-align: center;
+}
+
+.button.pink:hover {
+        background: #FFF200 !important;
+        color: #252525;
+}
+
+@media screen and (max-width: 980px) {
+    .libraryleft, .libraryright {width: 100%; float: none;}
+}
+
+
+
+
+
+
+
+
+
+
+/*********************
+	SHOWNOTES
+*********************/
+
+/*------ SHOWNOTES - DETAIL VIEW ---------*/
+
+#shownote-wrapper .entry-header {
+	background-image: url('/wp-content/themes/beingboss2018/img/BB_Shownote_Header.png');
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat-y: no-repeat;
+	min-height: 220px;
+	text-align: center;
+	color: #fff;
+	padding: 20px 0;
+	position: relative;
+}
+
+#shownote-wrapper .entry-header .container {
+	position: absolute;
+    	margin: auto;
+    	top: 0;
+    	bottom: 0;
+    	display: table;
+    	left: 0;
+    	right: 0;
+}
+
+#shownote-wrapper .entry-intro {
+	margin: 25px auto;
+}
+
+h1.shownote-title {
+	text-transform: uppercase;
+	font-size: 32px;
+	line-height: 38px;
+	max-width: 800px;
+    	margin: 0 auto;
+}
+
+.shownote.entry-meta {
+	text-transform: uppercase;
+	font-size: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.shownote_intro {
+	padding-top: 30px;
+}
+
+.shownote_quote {
+	font-family: brandon-grotesque, sans-serif;
+	font-style: italic;
+	font-weight: 900;
+	font-size: 28px;
+	line-height: 34px;
+	color: #252525;
+	text-transform: uppercase;
+}
+
+.shownote_quoteauthor { 
+	text-align: right;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	font-size: 14px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+.shownote_quote_tweet {
+	text-align: right
+}
+
+.shownote_quote_tweet img {
+	width: 25px;
+}
+
+.shownote_description {
+	margin-top: 15px;
+}
+
+.shownote_description p, .shownote_description h2, .shownote_description h3, .shownote_description ul, 
+.shownote_description .bctt-click-to-tweet, .shownote_description ol, .shownote_description #tarotspreadform {
+	display: none;
+}
+
+.shownote_description p:first-of-type {
+	display: block;
+}
+
+#shownote-wrapper .optinwrapper {
+	background: url('/wp-content/themes/beingboss2018/img/Fullwidth_Download_BG.png'); 
+	background-size: cover; 
+	width: 100%; 
+	height: auto;
+	margin: 80px auto;
+	padding: 30px 0;
+}
+
+#shownote-wrapper .optinwrapper img {
+	display: block;
+	margin: 0 auto 25px;
+}
+
+#shownote-wrapper .optinwrapper h2 {
+	font-size: 32px;
+	text-transform: uppercase;
+}
+
+#shownote-wrapper .entry-content {
+	margin: 50px auto;
+}
+
+#shownote-wrapper .entry-content h3 {
+	margin-top: 50px;
+}
+
+#shownote-wrapper .entry-content ul {
+	padding: 0 0 0 20px;
+}
+
+.file-list-wrap {
+	display: -webkit-flex;
+    	display: flex;
+    	-webkit-flex-wrap: wrap;
+    	flex-wrap: wrap;
+    	width: 100%;
+    	height: auto;
+    	-webkit-justify-content: flex-start;
+    	justify-content: flex-start;
+    	-webkit-align-items: flex-start;
+    	align-items: flex-start;
+}
+
+.file-list-image {
+	width: 250px;
+	margin: 10px 10px 25px;
+}
+
+.file-list-image img {
+	width: 100%;
+}
+
+.shownote_sponsors img {
+	margin-bottom: 25px;
+	width: 100%;
+}
+
+.shownote_subscribe button {
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+}
+
+.shownote_subscribe button:hover {
+	background-color: #00AEEF !important;
+}
+
+.shownote_ceoday {
+	display: table;
+	margin: 30px auto 0;
+}
+
+.shownote_ceoday img {
+	width: 100%;
+}
+
+.shownote_nav {
+	margin: 50px 0 30px;
+	display: table;
+    	width: 100%;
+}
+
+.shownote_nav .previouslink {
+	text-align: left;
+	width: 48%;
+	float: left;
+}
+
+.shownote_nav .nextlink {
+	text-align: right;
+	width: 48%;
+	float: right;
+}
+
+.shownote_nav a {
+	color: #252525;
+	background-image: url(/wp-content/themes/beingboss2018/img/Scribble.png) !important;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	padding: 25px 0;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	font-size: 14px;
+}
+
+.shownote_nav a:hover {
+	color: #00AEEF;
+}
+
+.relatedpostsection {
+    	display: -webkit-flex;
+    	display: flex;
+    	-webkit-flex-wrap: wrap;
+    	flex-wrap: wrap;
+    	width: 100%;
+    	height: auto;
+    	-webkit-justify-content: center;
+    	justify-content: center;
+    	-webkit-align-items: flex-start;
+    	align-items: flex-start;
+}
+
+.relatedpostbox {
+    	width: 350px;
+    	margin: 10px 10px 25px;
+    	background-color: #fff;
+    	box-shadow: 0 0 15px #888;
+}
+
+.relatedpostimage {position: relative;}
+
+.relatedpostarrow {
+	width: 100%;
+	position: absolute;
+	height: 60px;
+	background: url('/wp-content/themes/beingboss2018/img/Home_LabelBack.png');
+	background-size: 100% 60px;
+	top: 0;
+}
+
+.relatedpostlabel {
+	text-align: center;
+	color: #fff;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	font-size: 14px;
+	margin: 10px auto;
+	display: block;
+}
+
+.relatedpostimage img {
+	width: 100%;
+}
+
+.relatedpostbottom {
+	padding: 20px 35px 30px;
+    	text-align: center;
+}
+
+.relatedpostbottom img {
+    	padding-bottom: 15px;
+	width: 20px;
+}
+
+#home-wrapper .relatedpostbottom img {
+	padding-bottom: 0px;
+	margin-bottom: 15px;
+	width: auto;
+	height: 35px;
+}
+
+.relatedpostbottom a .relatedposttitle {
+    	color: #252525;
+}
+
+.relatedpostbottom a .relatedposttitle:hover, .relatedpostbox span.tve-leads-two-step-trigger .relatedposttitle:hover {
+	color: #00AEEF;
+}
+
+.relatedposttitle {
+    	font-family: brandon-grotesque, sans-serif;
+    	font-weight: 900;
+    	font-size: 19px;
+    	text-transform: uppercase;
+    	line-height: 26px;
+}
+
+a.relatedpostlistennow, .relatedpostbox span.tve-leads-two-step-trigger .relatedpostlistennow, .relatedpostlistennow {
+    	color: #252525;
+    	background-image: url(/wp-content/themes/beingboss2018/img/Scribble.png) !important;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	padding: 25px 15px;
+    	font-family: brandon-grotesque, sans-serif;
+    	font-weight: 900;
+    	font-size: 14px;
+}
+
+a.relatedpostlistennow:hover, .relatedpostbox span.tve-leads-two-step-trigger .relatedpostlistennow:hover, .relatedpostlistennow:hover {
+    	color: #00AEEF;
+}
+
+@media screen and (max-width: 767px) {
+	.file-list-image {
+    		width: 100%;
+	}
+
+	.shownote_sponsors {
+		margin-top: 50px;
+	}
+
+	h1.shownote-title {
+		text-transform: uppercase;
+		font-size: 24px;
+		line-height: 28px;
+	}
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1095px) {
+	.file-list-image {
+		width: 200px;
+	}
+
+	.relatedpostbox {
+    		width: 500px;
+	}
+}
+
+
+
+
+
+
+
+
+
+/**********************
+	ARCHIVE THUMBNAIL
+**********************/
+
+.searchandfilter ul {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.searchandfilter ul li {
+	display: inline-block;
+	    margin-left: 25px;
+}
+
+.searchandfilter select.sf-input-select {
+	border: none;
+    	border-bottom: 1px solid #eaeaea;
+	-webkit-appearance: button;
+}
+
+
+.archivecontainer {
+	display: -webkit-flex;
+    	display: flex;
+    	-webkit-flex-wrap: wrap;
+    	flex-wrap: wrap;
+    	width: 100%;
+    	height: auto;
+    	-webkit-justify-content: space-between;
+    	justify-content: space-between;
+    	-webkit-align-items: flex-start;
+    	align-items: flex-start;
+}
+
+.archiveitem {
+	width: 350px;
+    	margin: 10px 10px 25px;
+	background-color: #fff;
+	box-shadow: 0 0 15px #888;
+}
+
+.archiveitemcontent {
+	padding: 20px 35px 30px;
+	text-align: center;
+}
+
+.archiveitemcontent img {
+	padding-bottom: 15px;
+	width: 22px;
+}
+
+.archiveitemcontent a .archiveitemtitle {
+	color: #252525;
+}
+
+.archiveitemcontent a .archiveitemtitle:hover {
+	color: #00AEEF;
+}
+
+.archiveitemtitle {
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	font-size: 19px;
+	text-transform: uppercase;
+	line-height: 26px;
+}
+
+p.archiveitemauthor {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 10px !important;
+	line-height: 14px !important;
+	text-transform: uppercase;
+	padding: 5px 0 15px !important;
+}
+
+a.archiveitemreadmore {
+	color: #252525;
+	background-image: url(/wp-content/themes/beingboss2018/img/Scribble.png) !important;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	padding: 25px 15px;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	font-size: 14px;
+}
+
+a.archiveitemreadmore:hover {
+	color: #00AEEF;
+}
+
+.search-filter-results .pagination {
+	display: block;
+	margin: 25px auto;
+	text-align: center;
+}
+
+.search-filter-results .nav-previous, .search-filter-results .nav-next, .pagination .nav-previous, .pagination .nav-next {
+	display: inline-block;
+	margin: 10px;
+}
+
+.search-filter-results .nav-previous a, .search-filter-results .nav-next a, .pagination .nav-previous a, .pagination .nav-next a {
+	background-color: #eaeaea;
+	color: #252525;
+	font-style: italic;
+	padding: 5px 15px;
+	border-radius: 5px;
+	    display: table;
+}
+
+.search-filter-results .nav-previous a:hover, .search-filter-results .nav-next a:hover, .pagination .nav-previous a:hover, .pagination .nav-next a:hover {
+	background-color: #00AEEF;
+}
+
+@media screen and (max-width: 767px) {
+	.searchandfilter ul {
+		display: table;
+		-webkit-padding-start: 0px;
+		text-align: center;
+		    width: 100%;
+	}
+
+	.searchandfilter ul li {
+		display: inline-block;
+		width: 45%;
+		margin: 2%;
+	}
+
+	.searchandfilter select.sf-input-select {
+		min-width: 100%;
+    		max-width: 100%;
+	}
+
+	.searchandfilter label {
+    		display: inline;
+    		margin: 0;
+    		padding: 0;
+    		width: 100%;
+	}
+
+	.archivecontainer {
+		    -webkit-justify-content: center;
+    			justify-content: center;
+    			-webkit-align-items: center;
+    			align-items: center;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+	.archiveitem {
+		width: 325px;
+    		margin: 10px 10px 25px;
+		background-color: #fff;
+		box-shadow: 0 0 15px #888;
+	}
+}
+
+
+
+
+
+/**********************
+	ARCHIVE - SINGLE
+**********************/
+
+#article-wrapper .entry-header {
+	background-image: url('/wp-content/themes/beingboss2018/img/BB_Shownote_Header.png');
+	background-size: cover;
+	background-position: center bottom;
+	background-repeat-y: no-repeat;
+	min-height: 220px;
+	text-align: center;
+	color: #fff;
+	padding: 20px 0;
+	position: relative;
+}
+
+#article-wrapper .entry-header .container {
+	position: absolute;
+    	margin: auto;
+    	top: 0;
+    	bottom: 0;
+    	display: table;
+    	left: 0;
+    	right: 0;
+}
+
+#article-wrapper .entry-intro {
+	margin: 25px auto;
+}
+
+h1.article-title {
+	text-transform: uppercase;
+	font-size: 32px;
+	line-height: 38px;
+	max-width: 800px;
+    	margin: 0 auto;
+}
+
+.article.entry-meta {
+	font-size: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.article.entry-meta .date, .article.entry-meta .author a {
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.article.entry-meta .author a:hover {
+	color: #FFF200;
+}
+
+#article-wrapper .entry-content {
+	margin: 50px auto;
+}
+
+#article-wrapper .entry-content h3 {
+	margin-top: 25px;
+	text-transform: uppercase;
+}
+
+#article-wrapper .entry-content ul {
+	padding: 0 0 0 20px;
+}
+
+#article-wrapper .article-image {
+	margin-bottom: 50px;
+}
+
+#article-wrapper .col-md-8 {
+	padding-left: 50px;
+}
+
+#article-wrapper .articlebody h2 {
+	text-transform: uppercase;
+	padding-top: 25px;
+	line-height: 1.3;
+}
+
+#article-wrapper .author-box {
+	font-size: 14px;
+	background: #eaeaea;
+	display: table;
+	margin: 50px auto;
+	width: 100%;
+	height: 250px;
+}
+
+#article-wrapper .author-box .leftside {
+	float: left;
+	width: 30%;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+}
+
+#article-wrapper .author-box .rightside {
+	float: right;
+	width: 70%;
+}
+
+#article-wrapper .author-box h4 a {
+	color: #252525;
+	text-transform: uppercase;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+}
+
+#article-wrapper .author-box h4 a:hover {
+	color: #00AEEF;
+}
+
+#article-wrapper iframe {
+	max-width: 100%;
+}
+
+#article-wrapper .optinwrapper {
+	background: url('/wp-content/themes/beingboss2018/img/Fullwidth_Download_BG.png'); 
+	background-size: contain; 
+	background-position: right;
+	width: 100%; 
+	height: auto;
+	margin: 25px auto;
+	padding: 30px 25px;
+}
+
+#article-wrapper .optinwrapper img {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+#article-wrapper .optinwrapper h3 {
+	font-size: 26px;
+	text-transform: uppercase;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 990px) {
+	#article-wrapper .author-box {
+		height: auto;
+	}
+
+	#article-wrapper .author-box .leftside {
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		margin: 25px auto 0;
+		float: none;
+	}
+
+	#article-wrapper .author-box .rightside {
+    		float: right;
+    		width: 100%;
+	}
+
+}
+
+
+@media screen and (max-width: 1095px) {
+	#article-wrapper .col-md-8 {
+		padding-left: 15px;
+	}
+}
+
+
+
+/**********************
+	EVENTS
+**********************/
+
+.eventcontainer{}
+
+.eventitem {
+	width: 100%; 
+	padding: 50px 0 30px; 
+	border-bottom: 1px solid #252525; 
+	display: table;
+}
+
+.eventitemleft {
+	width: 15%; 
+	float: left;
+}
+
+.eventitemleft .month {
+	background: #252525;
+    	padding: 8px 20px;
+    	color: #fff;
+    	text-transform: uppercase;
+    	text-align: center;
+    	font-size: 14px;
+    	line-height: 14px;
+}
+
+.eventitemleft .day p {
+	font-size: 92px !important;
+	line-height: 1.0 !important;
+    	padding-top: 15px;
+}
+
+.eventitemcontent {
+	width: 55%; 
+	float: left; 
+	margin: 0 3%;
+	padding: 0;
+}
+
+h2.eventitemtitle a {
+	color: #252525;
+	font-size: 24px;
+}
+
+h2.eventitemtitle a:hover {
+	color: #00AEEF;
+}
+
+.eventitemcontent p {
+	font-family: brandon-grotesque, sans-serif;
+	text-transform: uppercase;
+	color: #7C7C7C;
+	font-weight: 900;
+	font-size: 14px !important;
+}
+
+.eventitemright {
+	width: 22%; 
+	float: right;
+}
+
+.eventitemright a.button-yellow {
+	margin: 50px 0 15px auto;
+}
+
+@media screen and (max-width: 599px) {
+	.eventitemleft {
+		width: 25%;
+		margin-right: 5%;
+	}
+
+	.eventitemleft .month {
+		font-size: 10px;
+		padding: 5px 10px;
+	}
+
+	.eventitemleft .day p {
+		font-size: 42px !important;
+	}
+
+	.eventitemcontent {
+		width: 100%;
+		margin: 0;
+		float: none;
+		padding: 0;
+	}
+
+	h2.eventitemtitle a {
+		font-size: 18px;
+	}
+
+	.eventitemcontent p {
+		font-size: 14px !important;
+		line-height: 20px !important;
+	}
+
+	.eventitemright {
+		width: 100%;
+	}
+
+	.eventitemright a.button-yellow {
+		margin: 30px auto 15px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 799px) {
+	.eventitemleft {
+		width: 25%;
+	}
+
+	.eventitemleft .month {
+		font-size: 12px;
+	}
+
+	.eventitemleft .day p {
+		font-size: 64px !important;
+	}
+
+	.eventitemcontent {
+		width: 70%;
+		margin: 0;
+		float: right;
+		padding: 0;
+	}
+
+	.eventitemright {
+		width: 100%;
+	}
+
+	.eventitemright a.button-yellow {
+		margin: 30px auto 15px;
+	}
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1095px) {
+	
+	.eventitemleft .month {
+		font-size: 12px;
+	}
+
+	.eventitemleft .day p {
+		font-size: 64px !important;
+	}
+}
+
+
+
+
+
+/**********************
+	VACATION LANDING
+**********************/
+
+#vacation-subscribe {
+	background-image: url('/wp-content/themes/beingboss2018/img/Vacation_SubscribeBack.jpg');
+	background-size: cover;
+    	height: auto;
+	width: 100%;
+	box-shadow: 0px 0px 10px 1px #888;
+	margin-top: -100px;
+    	margin-bottom: 80px;
+    	z-index: 500;
+    	position: relative;
+}
+
+#vacation-subscribe button {
+    font-family: brandon-grotesque, sans-serif !important;
+    font-weight: 900 !important;
+}
+
+.vacationcontainer {
+	display: -webkit-flex;
+    	display: flex;
+    	-webkit-flex-wrap: wrap;
+    	flex-wrap: wrap;
+    	width: 100%;
+    	height: auto;
+    	-webkit-justify-content: space-between;
+    	justify-content: space-between;
+    	-webkit-align-items: flex-start;
+    	align-items: flex-start;
+}
+
+.vacationitem {
+	width: 300px;
+    	margin: 10px 25px 25px;
+	background-color: #fff;
+}
+
+.vacationitemimage {
+	box-shadow: 0 0 15px #888;
+}
+
+.vacationitemimage img {
+	width: 100%;
+}
+
+.vacationitemcontent {
+	padding: 20px 35px 30px;
+	text-align: center;
+}
+
+.vacationitemcontent a .vacationitemtitle {
+	color: #252525;
+}
+
+.vacationitemcontent a .vacationitemtitle:hover {
+	color: #00AEEF;
+}
+
+.vacationitemtitle {
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	font-size: 16px;
+	text-transform: uppercase;
+	line-height: 22px;
+}
+
+.vacationitemtitle h5 {
+	margin-bottom: 0px;
+}
+
+a.vacationitemreadmore {
+	color: #252525;
+    	padding: 15px;
+	font-size: 12px;
+	font-family: brandon-grotesque, sans-serif;
+}
+
+.vacationitemvideo {
+	color: #252525;
+    	padding: 0;
+	font-size: 12px;
+	font-family: brandon-grotesque, sans-serif;
+}
+
+
+a.vacationitemreadmore:hover {
+	color: #00AEEF;
+	cursor: pointer;
+}
+
+.vacationitemvideo:hover {
+	color: #00AEEF;
+	cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+	.vacationcontainer {
+    		-webkit-justify-content: center;
+    		justify-content: center;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************
+	RESOURCES
+**********************/
+
+#resource-wrapper #content {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#resource-wrapper h1.resource-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 32px !important;
+    	line-height: 40px !important;
+}
+
+#resource-wrapper .resourcelink {
+	width: 100%;
+	border-bottom: 1px solid #eaeaea;
+	padding-top: 10px;
+	padding-bottom: 10px !important;
+}
+
+.resourcelink a {
+	color: #252525;
+}
+
+.resourcelink a:hover {
+	color: #00AEEF;
+}
+
+.resourcelink .itemleft {
+    	float: left;
+}
+
+.resourcelink .itemleft img {
+    	height: 25px;
+    	padding-right: 20px;
+}
+
+.resourceparent {
+	width: 100%; 
+	margin: 50px auto 0; 
+	display: table; 
+	box-shadow: 0px 0px 10px 1px #888;
+	position: relative;
+}
+
+.resourceimage {
+	float: left; 
+	width: 65%; 
+	height: 350px; 
+	background: #eaeaea; 
+	display: table;
+	position: relative;
+}
+
+.resourceimage .resourcetitle {
+	position: absolute;
+    	top: 0;
+    	text-align: center;
+    	width: 100%;
+    	color: #fff;
+    	font-family: "lust-script",sans-serif;
+    	font-size: 72px;
+    	line-height: 1.3;
+    	padding: 0 50px;
+    	bottom: 0;
+    	margin: auto;
+    	display: table;
+}
+
+.resourceright {
+	float: right; 
+	width: 35%; 
+	height: 350px;
+	display: table;
+	position: relative;
+	padding: 40px 25px;
+}
+
+.resourceparent .showSingle {
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+	font-family: brandon-grotesque, sans-serif;
+	background: url('/wp-content/themes/beingboss2018/img/Scribble.png');
+	color: #252525;
+	background-size: 118px 39px;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	display: table;
+	font-weight: 900;
+    	padding: 15px;
+	font-size: 14px;
+	width: 118px;
+    	text-align: center;
+}
+
+.resourceparent .showSingle:hover {
+	color: #00AEEF !important;
+}
+
+#cat1.targetCat .resourcechild a, #cat3.targetCat .resourcechild a {
+	text-transform: uppercase;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	color: #EC008C;
+	font-size: 20px;
+}
+
+#cat1.targetCat .resourcechild a:hover, #cat3.targetCat .resourcechild a:hover {
+	color: #BCBEC0;
+}
+
+#cat2.targetCat .resourcechild a, #cat4.targetCat .resourcechild a {
+	text-transform: uppercase;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+    	font-size: 20px;
+}
+
+.resourcechild {
+	display: table; 
+	width: 100%; 
+	margin: 15px auto; 
+	box-shadow: 0px 0px 10px 1px #888; 
+	text-align: center; 
+	padding: 15px 0;
+}
+
+.resourcechild img {
+	clear: both;
+    	display: block;
+    	margin: 0 auto 10px;
+}
+
+.resourcesection {
+	padding-top: 15px;
+}
+
+.resource-quote {
+	padding-top: 50px;
+}
+
+#resource-wrapper .optinwrapper {
+	background: url('/wp-content/themes/beingboss2018/img/Fullwidth_Download_BG.png'); 
+	background-size: contain;
+	width: 100%; 
+	height: auto;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#resource-wrapper .optinwrapper img {
+	display: block;
+	margin: 0 auto 25px;
+}
+
+#resource-wrapper .optinwrapper h2 {
+	font-size: 30px;
+	text-transform: uppercase;
+	width: 85%;
+	margin: 15px auto;
+}
+
+
+
+@media screen and (max-width: 499px) {
+	.resourceimage {
+		height: auto;
+		width: 100%;
+	}
+
+	.resourceimage .resourcetitle {
+		font-size: 40px;
+		padding: 0 15px;
+	}
+
+	.resourceright {
+		height: auto;
+		padding: 0;
+		width: 100%;
+	}
+
+	.resourceright .pagesection80 {
+		padding: 25px 0;
+	}
+
+	.resourceright p {
+		margin-bottom: 25px;
+	}
+
+	.resourceparent .showSingle {
+		bottom: 0px;
+	}
+
+	.single-resources a.first_back_link {
+		display: none;
+	}
+
+	.single-resources .optinwrapper {
+		margin-top: 50px;
+	}
+
+	.resource-quote {
+		padding-top: 50px;
+	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 769px) {
+	.resourceimage {
+		height: auto;
+		width: 100%;
+	}
+
+	.resourceimage .resourcetitle {
+		font-size: 55px;
+	}
+
+	.resourceright {
+		height: auto;
+		padding: 0;
+		width: 100%;
+	}
+
+	.resourceright .pagesection80 {
+		padding: 25px 0;
+	}
+
+	.resourceright p {
+		margin-bottom: 25px;
+	}
+
+	.resourceparent .showSingle {
+		bottom: 0px;
+	}
+
+	.single-resources a.first_back_link {
+		display: none;
+	}
+
+	.single-resources .optinwrapper {
+		margin-top: 50px;
+	}
+
+	.resource-quote {
+		padding-top: 50px;
+	}
+	
+}
+
+
+@media screen and (min-width: 770px) and (max-width: 994px) {
+	
+	.resourceimage {
+		height: auto;
+	}
+
+	.resourceimage .resourcetitle {
+		font-size: 55px;
+	}
+
+	.resourceright {
+		height: auto;
+		padding: 0;
+	}
+
+	.resourceright .pagesection80 {
+		padding: 25px 0;
+	}
+
+	.resourceright p {
+		margin-bottom: 25px;
+	}
+
+	.resourceparent .showSingle {
+		bottom: 0px;
+	}
+	
+}
+
+@media screen and (min-width: 995px) and (max-width: 1200px) {
+	
+	.resourceimage img {
+		height: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+/**********************
+	START HERE
+**********************/
+
+.foundationswrapper {
+	padding-top: 15px;
+}
+
+.foundationitem {
+	display: table;
+    	width: 100%;
+    	height: 300px;
+    	margin: 25px auto;
+	position: relative;
+}
+
+.foundationitem .leftimage {
+	display: table; 
+	position: absolute;
+	width: 50%; 
+	height: 300px; 
+	background: #252525; 
+	left: 0;
+	z-index: 400;
+	box-shadow: 0 0 15px #888;
+}
+
+.foundationitem .righttext {
+	display: table; 
+	position: absolute;
+	width: 60%; 
+	background: #fff; 
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 500; 
+	box-shadow: 0 0 15px #888;
+	padding: 50px;
+	margin: auto;
+}
+
+.foundationitem .lefttext {
+	display: table; 
+	position: absolute;
+	width: 60%; 
+	background: #fff; 
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 500;
+	box-shadow: 0 0 15px #888;
+	padding: 50px;
+	margin: auto;
+}
+
+.foundationitem .rightimage {
+	display: table; 
+	position: absolute;
+	width: 50%; 
+	height: 300px; 
+	background: #252525; 
+	right: 0;
+	z-index: 400; 
+	box-shadow: 0 0 15px #888;
+}
+
+.foundationitem .leftimage img, .foundationitem .rightimage img {
+	width: 100%;
+    	height: 100%;
+}
+
+.foundationitem h3 {
+	font-size: 24px;
+}
+
+.discoversection {
+	display: table;
+    	width: 100%;
+    	height: auto;
+    	margin: 100px auto 15px;
+	position: relative;
+	box-shadow: 0 0 15px #888;
+}
+
+.discoversection .col-md-7 {
+	padding-left: 50px;
+}
+
+.discoversubscribe {
+	width: 100%;
+	height: 125px;
+	background: #FFF200;
+	display: table;
+	padding: 15px 0 5px;
+}
+
+.discoversubscribe h3 {
+	padding-top: 15px;
+}
+
+.discoversubscribe button {
+	font-family: brandon-grotesque, sans-serif;
+    	font-weight: 900;
+}
+
+
+.jointheclubsection {
+	background: url('/wp-content/themes/beingboss2018/img/StartHere_IAmBeingBoss.jpg');
+	background-size: cover;
+	background-position: center;
+	padding: 30px 0;
+}
+
+@media screen and (max-width: 774px) {
+	.foundationitem .leftimage, .foundationitem .rightimage, .foundationitem .lefttext, .foundationitem .righttext {
+		position: relative;
+		width: 100%;
+	}
+
+	.foundationitem .leftimage, .foundationitem .rightimage {
+		display: none;
+	}
+
+	.discoversection .col-lg-5 {
+		padding-bottom: 50px;
+	}
+}
+
+
+@media screen and (min-width: 775px) and (max-width: 992px) {
+	
+	.foundationitem .leftimage, .foundationitem .rightimage {
+		width: 75%;
+	}
+	
+	.foundationitem .lefttext, .foundationitem .righttext {
+		width: 70%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+/**********************
+	SQUEEZE
+**********************/
+
+#squeeze-page .menuright, #squeeze-page .drawer-hamburger {
+	visibility: hidden;
+}
+
+
+.squeeze_subscribe p {
+	padding: 0;
+}
+
+.squeeze_subscribe .thrv_wrapper {
+	margin-top: 0 !important;
+}
+
+.squeeze_subscribe button {
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+}
+
+.squeeze_subscribe button:hover {
+	background-color: #00AEEF !important;
+}
+
+
+
+
+
+
+
+
+/**********************
+	WEBINAR DETAIL
+**********************/
+
+.single-webinar #footer-subscribe {
+	display: none;
+}
+
+.single-webinar #wrapper-footer {
+	background: #fff;
+	color: #252525;
+}
+
+.single-webinar #wrapper-footer .site-info {
+	text-align: center;
+	padding-top: 0;
+}
+
+#webinar-wrapper .bbpage-header {
+	position: relative;
+	height: 450px;
+}
+
+#webinar-wrapper .bbpage-header .container {
+    	height: 80%;
+	position: relative;
+}
+
+#webinar-wrapper .bbpage-header .headertext {
+	width: 50%;
+	left: 0;
+	margin: auto;
+    	top: 0;
+    	bottom: 0;
+    	display: table;
+	right: initial;
+}
+
+#webinar-wrapper .bbpage-header .headerguests {
+	width: 50%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	text-align: right;
+	position: absolute;
+	display: table;
+}
+
+#webinar-wrapper .bbpage-header .headerguests .guest {
+	display: inline-block;
+	text-align: center;
+	margin-left: 25px;
+	color: #fff;
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+#webinar-wrapper .bbpage-header .headerguests .guest p {
+	font-size: 14px !important;
+	line-height: 1.3 !important;
+	padding-top: 15px;
+}
+
+.single-webinar h1.webinar-title {
+	color: #fff;
+	font-family: "lust-script",sans-serif;
+	font-size: 54px;
+	font-weight: 400;
+	text-transform: none;
+}
+
+.single-webinar img.guest-image {
+	border-radius: 100%;
+    	width: 175px;
+    	height: 175px;
+    	object-fit: cover;
+	border: 4px solid #fff;
+}
+
+.single-webinar .top-subscribe {
+	background: #fff;
+    	box-shadow: 0 0 15px #888;
+    	padding: 25px;
+    	display: table;
+    	width: 100%;
+    	margin: -85px auto 0;
+    	height: 175px;
+	position: relative;
+}
+
+.single-webinar .top-subscribe .inner {
+    	position: relative;
+    	margin: auto;
+    	top: 0;
+    	bottom: 0;
+    	left: 0;
+    	right: 0;
+    	display: table;
+    	width: 100%;
+}
+
+.single-webinar .webinar-left {
+	float: left;
+	width: 20%;
+}
+
+.single-webinar .webinar-right {
+	float: right;
+	width: 75%;
+}
+
+.single-webinar p.month {
+    	background: #252525;
+    	padding: 8px 20px;
+    	color: #fff;
+    	text-transform: uppercase;
+    	text-align: center;
+    	font-size: 16px;
+    	line-height: 14px;
+	font-family: brandon-grotesque, sans-serif;
+    	font-style: normal;
+    	font-weight: 900;
+	line-height: 14px !important;
+}
+
+.single-webinar p.day {
+    	font-size: 92px !important;
+    	line-height: 1.0 !important;
+    	padding-top: 15px;
+	font-family: "lust-script",sans-serif;
+	text-align: center;
+}
+
+
+.top-subscribe button.webinar-button {
+	margin: 30px auto 0;
+	background: #FFF200;
+	color: #252525;
+}
+
+.top-subscribe button.webinar-button:hover {
+	background: #EC008C;
+	color: #fff;
+}
+
+article.webinar .entry-footer button.webinar-button {
+	margin: 30px auto 0;
+}
+
+.single-webinar footer#wrapper-footer .site-info a {
+	color: #252525;
+}
+
+.single-webinar footer#wrapper-footer .site-info a:hover {
+	color: #EC008C;
+}
+
+
+@media screen and (max-width: 992px) {
+	#webinar-wrapper .bbpage-header {
+		height: auto;
+		padding: 25px 0 75px;
+	}
+	
+	#webinar-wrapper .bbpage-header .headertext {
+		width: 100%;
+    		left: unset;
+    		margin: 25px auto;
+    		top: unset;
+    		bottom: unset;
+    		display: table;
+    		right: unset;
+    		position: relative;
+	}
+
+	#webinar-wrapper .bbpage-header .headerguests {
+		width: 100%;
+    		right: unset;
+    		top: unset;
+    		bottom: unset;
+    		margin: 25px auto 50px;
+    		text-align: center;
+    		position: relative;
+    		display: table;
+	}
+
+	#webinar-wrapper .bbpage-header .headerguests .guest {
+		margin-left: 0px;
+		margin: 15px;
+	}
+
+	.single-webinar .webinar-left {
+		margin-right: 30px;
+	}
+		
+	.single-webinar .webinar-right {
+		width: 100%;
+		float: none;
+	}
+
+	.single-webinar p.day {
+		font-size: 72px !important;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.single-webinar p.day {
+    		font-size: 50px !important;
+	}
+
+	.single-webinar p.month {
+		font-size: 14px !important;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************
+	WOOCOMMERCE
+**********************/
+
+.woocommerce-account .site-main {
+	width: 100%;
+}
+
+.woocommerce-cart .site-main {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+	max-width: 100%;
+}
+
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+	max-width: 100%;
+}
+
+.woocommerce tbody, .woocommerce tbody td {
+	background: #f9f9f9;
+}
+
+.woocommerce input.button {
+	background-color: #ffdd00;
+	color: #252525;
+	-webkit-box-shadow: none;
+}
+
+.woocommerce input[type="submit"] {
+	-webkit-box-shadow: none !important;
+}
+
+.woocommerce input.button:hover {
+	background-color: #252525;
+	color: #fff;
+}
+
+.woocommerce a.button.alt {
+	background-color: #ffdd00;
+	color: #252525;
+}
+
+.woocommerce a.button.alt:hover {
+	background-color: #252525;
+}
+
+.woocommerce input.button.alt {
+ 	background-color: #ffdd00;
+	color: #252525;
+}
+
+.woocommerce input.button.alt:hover {
+ 	background-color: #252525;
+	color: #fff;
+}
+
+.woocommerce-checkout #payment {
+    background: #f9f9f9;
+}
+
+.woocommerce .woocommerce-info {
+    border-top-color: #ffdd00;
+}
+
+.woocommerce .woocommerce-message {
+    border-top-color: #ffdd00;
+}
+
+p.product.woocommerce.add_to_cart_inline {
+	border: none !important;
+}
+
+p.product.woocommerce.add_to_cart_inline span.amount {
+	display: none;
+}
+
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+	background: #252525 !important;
+	height: 28px;
+	color: #fff;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	width: 250px;
+	text-align: center;
+	font-size: 19px;
+	font-style: italic;
+	    line-height: 24px;
+    display: table;
+}
+
+.product .woocommerce .add_to_cart_inline  {
+    	border: 0px;
+	padding: 0px;
+}
+
+input#inscription_checkbox.input-checkbox {
+    display: inline-block;
+    margin: 6px 4px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    opacity: 100;
+}
+
+@media screen and (max-width: 769px) {
+	.woocommerce-additional-fields {
+		display: table;
+		margin: 50px 0;
+	}
+}
+
+#my_custom_checkout_field {
+	display: table;
+	margin: 50px 0 0;
+}
+
+#my_custom_checkout_field p {
+	padding-bottom: 5px;
+}
+
+#my_custom_checkout_field .custom-control {
+	padding-left: 5px;
+}
+
+
+#ckwc_opt_in_field {display: none;}
+
+#customer_details {
+	margin-bottom: 50px;
+}
+
+.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last {
+	width: 100%;
+}
+
+#order_review {
+	margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+/*********************
+	CLUBHOUSE
+*********************/
+
+.clubhouse-page-header {
+	width: 100%;
+	height: 475px;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	display: table;
+	overflow: hidden;
+}
+
+.clubhouse-mobile-header {
+	width: 100%;
+	height: 475px;
+	position: relative;
+	background-image: url('/wp-content/themes/beingboss2018/img/Clubhouse_Back1_Mobile.jpg');
+	background-size: cover;
+	background-position: center;
+	display: none;
+	overflow: hidden;
+}
+
+
+.clubhouse-page-header p:first-of-type {
+	padding-bottom: 0px !important;
+	line-height: 1 !important;
+}
+
+.clubhouse-page-header p.pagesection15 {
+	padding-top: 15px !important;
+	padding-bottom: 15px !important;
+}
+
+.clubhouse-overlay {
+	position: absolute;
+	width: 100%;
+	height: 477px;
+	background-image: url('/wp-content/themes/beingboss2018/img/Clubhouse_Video_Overlay.png');
+	background-size: cover;
+	z-index: 200;
+	opacity: .6;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#clubhouseVideo {
+    	position: relative;
+    	right: 0;
+    	bottom: 0;
+    	width: 100%; 
+    	height: 475px;
+	object-fit: cover;
+	z-index: 199;
+}
+
+
+/* Add some content at the bottom of the video/page */
+.clubhouseHeader {
+    	position: absolute;
+    	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: table;
+    	color: #fff;
+    	width: 100%;
+    	z-index: 201;
+    	padding: 0 5%;
+}
+
+#commitsection {
+	background: url('/wp-content/uploads/2018/01/Clubhouse_Back1.jpg');
+    	background-size: cover;
+    	background-position: center;
+    	padding: 30px 0;
+}
+
+#secretsection {
+	background: url('/wp-content/uploads/2018/01/Clubhouse_Back2.jpg');
+    	background-size: cover;
+    	background-position: center;
+    	padding: 30px 0;
+}
+
+#faqsection p {
+	font-size: 18px !important;
+	line-height: 1.3 !important;
+}
+
+#faqsection p.mlarge {
+	font-size: 30px !important;
+	line-height: 36px !important;
+}
+
+.clubhousepaymentsection {
+	width: 100%;
+	display: table;
+	height: auto;
+	background: #fff;
+}
+
+.clubhousepaymentsection .paymenttop {
+	background: url(/wp-content/uploads/2018/01/Clubhouse_Back_Yellow.jpg);
+    	background-size: cover;
+    	background-position: top center;
+	padding: 100px 0 0;
+	position: relative;
+	display: table;
+    	width: 100%;
+    	height: 375px;
+}
+
+.clubhousepaymentsection .paymentbottom {
+	background: #fff;
+	width: 100%;
+	height: auto;
+	display: table;
+	padding: 175px 0 80px;
+}
+
+.paymenttop .paymentboxes {
+	display: table;
+	width: 50%;
+	position: absolute;
+	bottom: -150px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.paymenttop .paymentboxes .box {
+	width: 28%;
+	margin: 0 2.66%;
+	display: inline-block;
+	box-shadow: 0 0 15px #888;
+}
+
+.paymenttop .paymentboxes .box .top {
+	background: #252525;
+	height: 175px;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	padding-top: 50px;
+	color: #fff;
+}
+
+.paymenttop .paymentboxes .box .bottom {
+	background: #fff;
+	width: 100%;
+	height: 150px;
+	padding: 25px 0;
+}
+
+.paymenttop .paymentboxes .box .top .price {
+	font-size: 50px;
+	color: #fff;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	line-height: 1;
+	text-align: center;
+	display: table;
+    	margin: 0 auto 15px;
+}
+
+.paymenttop .paymentboxes .box .bottom p {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: italic;
+	font-size: 11px !important;
+	text-align: center;
+	line-height: 1.3 !important;
+}
+
+
+
+
+.clubhouseoptionssection {
+	width: 100%;
+	display: table;
+	height: auto;
+	background: #fff;
+}
+
+.clubhouseoptionssection .optiontop {
+	background: url(/wp-content/uploads/2018/01/Clubhouse_Back_Yellow.jpg);
+    	background-size: cover;
+    	background-position: top center;
+	padding: 100px 0 0;
+	position: relative;
+	display: table;
+    	width: 100%;
+    	height: 375px;
+}
+
+.clubhouseoptionssection .optionbottom {
+	background: #fff;
+	width: 100%;
+	height: auto;
+	display: table;
+	padding: 350px 0 0;
+}
+
+.optiontop .optionboxes {
+	display: table;
+	width: 50%;
+	position: absolute;
+	bottom: -325px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.optiontop .optionboxes .box {
+	width: 42%;
+	margin: 0 4%;
+	display: inline-block;
+	box-shadow: 0 0 15px #888;
+}
+
+.optiontop .optionboxes .box .top {
+	background: #252525;
+	height: 175px;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	padding-top: 50px;
+	color: #fff;
+}
+
+.optiontop .optionboxes .box .bottom {
+	background: #fff;
+	width: 100%;
+	height: 325px;
+	padding: 25px 0;
+}
+
+.optiontop .optionboxes .box .top .price {
+	font-size: 42px;
+	color: #fff;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	line-height: 1;
+	text-align: center;
+	display: table;
+    	margin: 0 auto 15px;
+}
+
+.optiontop .optionboxes .box .bottom .option {
+	text-align: center;
+	margin: 0 auto 25px;
+}
+
+
+@media screen and (max-width: 724px) {
+
+	.clubhousepaymentsection .paymenttop, .clubhouseoptionssection .optiontop {
+		height: auto;
+		padding: 75px 0;
+	}
+
+	.clubhousepaymentsection .paymentbottom {
+		padding: 50px 0;
+	}
+
+	.clubhouseoptionssection .optionbottom {display: none;}
+
+	.paymenttop .paymentboxes {
+		width: 75%;
+		position: relative;
+		bottom: initial;
+	}
+
+	.optiontop .optionboxes {
+		width: 90%;
+		position: relative;
+		bottom: initial;
+	}
+
+	.paymenttop .paymentboxes .box, .optiontop .optionboxes .box {
+		width: 100%;
+		margin: 25px auto;
+	}
+
+	.optiontop .optionboxes .box .bottom {
+		height: auto;
+	}
+}
+
+
+@media screen and (max-width: 759px) {
+	.clubhouse-page-header {display: none;}
+	.clubhouse-mobile-header {display: table;}
+}
+
+@media screen and (min-width: 760px) {
+	.clubhouse-page-header {display: table;}
+	.clubhouse-mobile-header {display: none;}
+}
+
+
+
+@media screen and (min-width: 725px) and (max-width: 849px) {
+	.paymenttop .paymentboxes, .optiontop .optionboxes {
+		width: 100%;
+	}
+
+	.paymenttop .paymentboxes .box {
+		width: 30%;
+		margin: 0 1.66%;
+	}
+
+	.optiontop .optionboxes .box {
+		width: 45%;
+		margin: 0 2.5%;
+	}
+}
+
+@media screen and (min-width: 850px) and (max-width: 949px) {
+	.paymenttop .paymentboxes, .optiontop .optionboxes {
+		width: 90%;
+	}
+}
+
+
+@media screen and (min-width: 950px) and (max-width: 1550px) {
+	.paymenttop .paymentboxes, .optiontop .optionboxes {
+		width: 80%;
+	}
+}
+
+
+@media screen and (max-width: 1000px) {
+	.clubhouseoptionssection .optiontop {
+		padding: 50px 0 0;
+	}
+}
+
+
+
+
+/******* GRAVITY FORM STYLING ******/
+
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+	padding: 5px 8px !important;
+    background: #eaeaea;
+    border: none;
+    height: 50px;
+    color: #252525;
+}
+
+.gform_wrapper input::placeholder, .gform_wrapper input:-moz-placeholder, .gform_wrapper input::-webkit-input-placeholder, .gform_wrapper ::-webkit-input-placeholder, .gform_wrapper #placeholder {
+	color: #252525 !important;
+}
+
+.gform_wrapper select {
+	    height: 50px;
+    border: none;
+    background: #eaeaea;
+}
+
+.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_page_footer input.button, .gform_wrapper .gform_page_footer input[type=submit] {
+	    text-transform: uppercase;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.pum-theme-enterprise-blue .pum-title {
+	font-family: brandon-grotesque, sans-serif !important;
+	font-style: normal;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+
+/******* FIREFOX SPECIFIC STYLES ******/
+
+@-moz-document url-prefix() {
+
+	#home-wrapper .headersection .headertext {
+		top: 150px;
+	}
+
+	.bbpage-header .headertext {
+		top: 25%;
+	}
+
+	#webinar-wrapper .bbpage-header .headertext, #webinar-wrapper .bbpage-header .headerguests, .clubhouseHeader {
+		top: 20%;
+    	}
+
+	.single-webinar .top-subscribe .inner {
+		top: 20%;
+	}
+
+	#shownote-wrapper .entry-header .container, #article-wrapper .entry-header .container {
+		top: 15%;
+	}
+
+	.paymenttop .paymentboxes .box {
+		margin: 0 2.33%;
+	}
+
+	@media screen and (max-width: 724px) {
+		.paymenttop .paymentboxes .box {
+			margin: 25px 0;
+		}
+	}
+
+	@media screen and (min-width: 725px) and (max-width: 849px) {
+		.paymenttop .paymentboxes .box {
+			margin: 0 1%;
+		}
+	}
+}
+
+
+
+/******* DRIP FORM STYLING ******/
+
+input#drip-email, input#drip-Name  {
+    border-radius: 0px;
+    overflow: hidden;
+    border: 0px solid rgb(229, 229, 229);
+    font-style: italic !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    width: 300px;
+    max-width: 100%;
+    display: table;
+    margin: 15px auto !important;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+input#drip-email::placeholder, input#drip-Name::placeholder {
+	font-family: inherit !important;
+	color: #252525 !important;
+}
+
+.woocommerce-billing-fields #wcdrip_subscribe_field {
+	display: none;
+}
+
+.woocommerce-billing-fields #wcdrip_subscribe_field input#wcdrip_subscribe.custom-control-input {
+	opacity: 100;
+	margin: 0 10px 0 0;
+    display: inline-block;
+    position: relative;
+}
+
+.fullwidthform input#drip-email, .fullwidthform input#drip-Name  {
+	width: 35%;
+	display: inline-block;
+	float: left;
+	margin: 0 1.5% !important;
+}
+
+.fullwidthemailform input#drip-email {
+	width: 50%;
+	display: inline-block;
+	float: left;
+	margin: 0 1.5% !important;
+}
+
+@media screen and (max-width: 1000px) {
+	.fullwidthform input#drip-email, .fullwidthform input#drip-Name  {
+		width: 100%;
+		display: block;
+		float: none;
+		margin: 15px auto !important;
+	}
+
+	.fullwidthemailform input#drip-email {
+		width: 100%;
+		display: inline-block;
+		float: none;
+		margin: 0 1.5% 15px !important;
+	}
+}
+
+.squeezefullform input#drip-email, .squeezefullform input#drip-Name  {
+	width: 32%;
+	display: inline-block;
+	float: left;
+	margin: 0 1.5% 0 0 !important;
+}
+
+.squeezefullform input.button-yellow {
+	width: 28%;
+	max-width: 100%;
+    display: inline-block;
+    float: left;
+    margin: 0 1.5% 0 0 !important;
+    padding: 10px 15px;
+}
+
+.squeezefullemailform input#drip-email {
+	width: 50%;
+	display: inline-block;
+	float: left;
+	margin: 0 1.5% !important;
+}
+
+@media screen and (max-width: 1000px) {
+	.squeezefullform input#drip-email, .squeezefullform input#drip-Name  {
+		width: 100%;
+		display: block;
+		float: none;
+		margin: 15px auto !important;
+	}
+
+	.squeezefullform input.button-yellow {
+		width: 250px;
+		max-width: 100%;
+	    display: block;
+	    float: none;
+	    margin: 0 auto !important;
+	    padding: 10px 25px;
+	}
+
+	.squeezefullemailform input#drip-email {
+		width: 100%;
+		display: inline-block;
+		float: none;
+		margin: 0 1.5% 15px !important;
+	}
+}
+
+
+/*************************
+NEW ORLEANS
+************************/
+
+
+.nolapaymentsection {
+	width: 100%;
+	display: table;
+	height: auto;
+	background: #fff;
+}
+
+.nolapaymentsection .paymenttop {
+	background: url(/wp-content/uploads/2018/03/NOLA_Back_Sales.jpg);
+    background-size: cover;
+    background-position: top center;
+	padding: 50px 0 0;
+	position: relative;
+	display: table;
+    width: 100%;
+    height: 325px;
+}
+
+.nolapaymentsection .paymentbottom {
+	background: #fff;
+	width: 100%;
+	height: 500px;
+	display: table;
+	padding: 0 0 80px;
+}
+
+.nolapaymentsection .paymentboxes {
+	display: table;
+	width: 60%;
+	position: relative;
+	bottom: unset;
+	left: 0;
+	right: 0;
+	margin: -175px auto 0;
+}
+
+.nolapaymentsection .paymentboxes .box {
+	width: 41%;
+	margin: 0 4.33%;
+	display: table;
+	box-shadow: 0 0 15px #888;
+	float: left;
+}
+
+.nolapaymentsection .paymentboxes .box .top {
+	background: #252525;
+	height: 175px;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align: center;
+	padding-top: 50px;
+	color: #fff;
+}
+
+.nolapaymentsection .paymentboxes .box.box2 .top {padding-top: 0px;}
+.nolapaymentsection .paymentboxes .box.box2 .top img {width: 100%; padding-bottom: 25px;}
+
+.nolapaymentsection .paymentboxes .box .bottom {
+	background: #fff;
+	width: 100%;
+	height: auto;
+	padding: 25px 0;
+	display: table;
+}
+
+.nolapaymentsection .paymentboxes .box .top .price {
+	font-size: 50px;
+	color: #fff;
+	font-family: brandon-grotesque, sans-serif;
+	font-weight: 900;
+	line-height: 1;
+	text-align: center;
+	display: table;
+    margin: 0 auto 15px;
+}
+
+.nolapaymentsection .paymentboxes .box .bottom p.ticket {
+	font-size: 16px !important;
+	text-align: center;
+	line-height: 1.3 !important;
+	border-top: 1px solid #eaeaea;
+	padding: 15px 0;
+	width: 75%;
+    margin: 0 auto;
+}
+
+.nolapaymentsection .paymentboxes .box .bottom p:nth-of-type(2) {
+	border: none;
+}
+
+@media screen and (max-width: 774px) {
+
+	.nolapaymentsection .paymentboxes {
+		width: 100%;
+		margin: -125px auto 0;
+	}
+
+	.nolapaymentsection .paymentboxes .box {
+		    width: 90%;
+		    margin: 0 auto  50px;
+		    float: none;
+	}
+
+	#faqsection p.mlarge {
+	    font-size: 24px !important;
+	    line-height: 28px !important;
+	}
+}
+
+
+@media screen and (min-width: 775px) and (max-width: 1000px) {
+	.nolapaymentsection .paymentboxes {
+		width: 100%;
+	}
+}
