@@ -544,7 +544,7 @@ h5, .h5 {
 .brandon {
 	font-family: brandon-grotesque, sans-serif;
 	font-style: normal;
-	font-weight: 900;
+	font-weight: 900 !important;
 	text-transform: uppercase;
 }
 

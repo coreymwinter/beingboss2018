@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<div class="col-md-5 footer-subscribe-left">
 
-					<img src="/wp-content/themes/beingboss2018/img/Footer_HeadphonesBoss.png">
+					<img src="/wp-content/themes/beingboss2018/img/Footer_HeadphonesBoss2.png">
 
 				</div><!--col end -->
 				<div class="col-md-7 footer-subscribe-right">
