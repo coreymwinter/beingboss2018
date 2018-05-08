@@ -144,6 +144,21 @@ $container = get_theme_mod( 'understrap_container_type' );
 		  jQuery("input[name=wcdrip_subscribe]").prop('checked', true);
 		}
 	</script>
+<script>
+	jQuery(document).ready(function(){
+	  jQuery(window).bind('scroll', function() {
+	    var distance = 50;
+	    if (jQuery(window).scrollTop() > distance) {
+	      jQuery('.bg-light').addClass('scrolled');
+	      jQuery('.navbar-brand').addClass('blacklogo');
+	    }
+	    else {
+	      jQuery('.bg-light').removeClass('scrolled');
+	      jQuery('.navbar-brand').removeClass('blacklogo');
+	    }
+	  });
+	});
+</script>
 </body>
 
 </html>
