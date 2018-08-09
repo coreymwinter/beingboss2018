@@ -132,20 +132,41 @@ get_header();
 											<h3 class="gray">PIN IT:</h3>
 											<div class="shownote_pinit"><?php cmb2_bbshownotes_pinterest_images( 'bbshownotes_pinitimages', 'large' ); ?></div>
 										<?php } ?>
+
+										<div class="pagesection50">
+											<?php
+												// If comments are open or we have at least one comment, load up the comment template.
+												if ( comments_open() || get_comments_number() ) :
+													comments_template();
+												endif;
+											?>
+										</div>
 										
 									</div>
 									<div class="col-md-4">
 										<div class="shownote_sponsors">
-											<?php
+											<?php 
 												$sponsor_list = get_post_meta( get_the_ID(), 'bbshownotes_sponsor_select', true );
+
+												if ( !empty( $sponsor_list ) ) {
+													$sponsor_args = array(
+															'post_type' => array( 'sponsors' ),
+															'post__in' => $sponsor_list,
+															'meta_key'   => 'bbsponsors_weight',
+															'orderby'    => 'meta_value_num',
+															'order'      => 'ASC'
+													);
 												
-												if ($sponsor_list) {
-													echo "<h5 class='lightgray'>BROUGHT TO YOU BY:</h5>";
-													foreach ( $sponsor_list as $sponsor ) { 
-											?>
-																<a href="<?php echo get_post_meta( $sponsor, 'bbsponsors_link', true ); ?>" target="_blank" rel="nofollow noopener noreferrer"><?php echo get_the_post_thumbnail( $sponsor ); ?></a>
-											<?php		}
-												}
+													$sponsor_query = new WP_Query( $sponsor_args );
+
+												if ( $sponsor_query->have_posts() ) {
+														echo "<h5 class='lightgray'>BROUGHT TO YOU BY:</h5>";
+														while ( $sponsor_query->have_posts() ) {
+															$sponsor_query->the_post();
+												?>
+																	<a href="<?php echo get_post_meta( $post->ID, 'bbsponsors_link', true ); ?>" target="_blank" rel="nofollow noopener noreferrer"><?php echo get_the_post_thumbnail( $post->ID ); ?></a>
+												<?php		}
+													} }
 											?>
 										</div>
 										<div class="shownote_subscribe">

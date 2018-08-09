@@ -91,7 +91,7 @@ figure {
 	margin: 0;
 }
 
-.button, .buybutton, .button-yellow {
+.button, .buybutton, .button-yellow, .button-pink {
 	max-width: 85%;
 	margin: 0 auto;
 	text-align: center;
@@ -111,6 +111,11 @@ figure {
 	color: #252525;
 }
 
+.button-pink {
+	background-color: #EC008C;
+	color: #fff;
+}
+
 .button-short {
 	padding: 5px 50px;
 }
@@ -124,6 +129,12 @@ figure {
 .button:hover, .buybutton:hover, .button-yellow:hover {
 	background-color: #EC008C;
 	color: #fff;
+	cursor: pointer;
+}
+
+.button-pink:hover {
+	background-color: #FFF200;
+	color: #252525;
 	cursor: pointer;
 }
 
@@ -160,6 +171,10 @@ ul.grayarrow li {
 	
 }
 
+img.imageshadow:hover {
+    box-shadow: 0 0 15px #888;
+}
+
 
 
 
@@ -170,7 +185,8 @@ ul.grayarrow li {
 #full-width-page-wrapper .container-fluid, #shownote-wrapper .container-fluid, 
 #article-wrapper .container-fluid, #resource-wrapper .container-fluid, 
 #squeeze-wrapper .container-fluid, #webinar-wrapper .container-fluid, 
-#home-wrapper .container-fluid, #search-wrapper .container-fluid {
+#home-wrapper .container-fluid, #search-wrapper .container-fluid,
+#archive-wrapper .container-fluid {
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -182,8 +198,13 @@ ul.grayarrow li {
 #squeeze-wrapper .container-fluid #primary.col-md-12,
 #webinar-wrapper .container-fluid #primary.col-md-12,
 #home-wrapper .container-fluid #primary.col-md-12, 
-#search-wrapper .container-fluid #primary.col-md-12 {
+#search-wrapper .container-fluid #primary.col-md-12,
+#archive-wrapper .container-fluid #primary.col-md-12 {
 	padding: 0;
+}
+
+#main.site-main {
+	width: 100%;
 }
 
 
@@ -238,7 +259,7 @@ ul.grayarrow li {
 }
 
 .margintop30 {
-	margin-top: 30px;
+	margin-top: 30px !important;
 }
 
 .margintop50 {
@@ -246,7 +267,7 @@ ul.grayarrow li {
 }
 
 .padtop15 {
-	padding-top: 15px;
+	padding-top: 15px !important;
 }
 
 .padbot0 {
@@ -573,19 +594,23 @@ h5, .h5 {
 	STRUCTURE
 *********************/
 
-#page-wrapper, #full-width-page-wrapper, #shownote-wrapper, #article-wrapper, #resource-wrapper, #squeeze-wrapper, #webinar-wrapper, #search-wrapper {
+#page-wrapper, #full-width-page-wrapper, #shownote-wrapper, #article-wrapper, #resource-wrapper, #squeeze-wrapper, #search-wrapper , #archive-wrapper{
 	margin-top: 72px;
 }
 
+#webinar-wrapper {
+	margin-top: 60px;
+}
+
 @media screen and (max-width: 550px) {
-	#page-wrapper, #full-width-page-wrapper, #shownote-wrapper, #article-wrapper, #resource-wrapper, #squeeze-wrapper, #webinar-wrapper, #search-wrapper {
+	#page-wrapper, #full-width-page-wrapper, #shownote-wrapper, #article-wrapper, #resource-wrapper, #squeeze-wrapper, #webinar-wrapper, #search-wrapper, #archive-wrapper {
 		margin-top: 80px;
 	}
 }
 
 
 @media screen and (min-width: 551px) and (max-width: 845px) {
-	#page-wrapper, #full-width-page-wrapper, #shownote-wrapper, #article-wrapper, #resource-wrapper, #squeeze-wrapper, #webinar-wrapper, #search-wrapper {
+	#page-wrapper, #full-width-page-wrapper, #shownote-wrapper, #article-wrapper, #resource-wrapper, #squeeze-wrapper, #webinar-wrapper, #search-wrapper, #archive-wrapper {
 		margin-top: 62px;
 	}
 }
@@ -716,6 +741,11 @@ h5, .h5 {
 	height: 100%;
 }
 
+.vertcenter, .vertalign {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 
 .emilyandkathleendesktop {display: block;}
 
@@ -828,31 +858,31 @@ body.home #wrapper-navbar .bg-light.scrolled {
 	background-size: 100% 100%;
 }
 
-body.home #wrapper-navbar .navbar-brand img {
+body.home-page #wrapper-navbar .navbar-brand img {
 	visibility: hidden;
 }
 
-body.home #wrapper-navbar .navbar-brand {
+body.home-page #wrapper-navbar .navbar-brand {
 	background-image: url('/wp-content/themes/beingboss2018/img/Head_Logo_White.svg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
-body.home #wrapper-navbar .navbar-brand.blacklogo img {
+body.home-page #wrapper-navbar .navbar-brand.blacklogo img {
 	visibility: visible;
 }
 
-body.home #wrapper-navbar .navbar-brand.blacklogo:hover img {
+body.home-page #wrapper-navbar .navbar-brand.blacklogo:hover img {
 	visibility: hidden;
 }
 
-body.home #wrapper-navbar .navbar-brand:hover {
+body.home-page #wrapper-navbar .navbar-brand:hover {
 	background-image: url('/wp-content/themes/beingboss2018/img/Head_Logo_Pink.svg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
-body.home #wrapper-navbar .navbar-brand.blacklogo:hover {
+body.home-page #wrapper-navbar .navbar-brand.blacklogo:hover {
 	background-image: url('/wp-content/themes/beingboss2018/img/Head_Logo_blue.svg');
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -860,23 +890,23 @@ body.home #wrapper-navbar .navbar-brand.blacklogo:hover {
 
 
 @media screen and (max-width: 1000px) {
-	body.home #wrapper-navbar .bg-light {
+	body.home-page #wrapper-navbar .bg-light {
 		background-color: #fff !important;
 	}
 
-	body.home #wrapper-navbar .navbar-brand img {
+	body.home-page #wrapper-navbar .navbar-brand img {
 		visibility: visible;
 	}
 
-	body.home #wrapper-navbar .navbar-brand {
+	body.home-page #wrapper-navbar .navbar-brand {
 		background-image: none;
 	}
 
-	body.home #wrapper-navbar .navbar-brand:hover img {
+	body.home-page #wrapper-navbar .navbar-brand:hover img {
 		visibility: hidden;
 	}
 
-	body.home #wrapper-navbar .navbar-brand:hover {
+	body.home-page #wrapper-navbar .navbar-brand:hover {
 		background-image: url('/wp-content/themes/beingboss2018/img/Head_Logo_blue.svg');
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
@@ -924,19 +954,19 @@ body.home #wrapper-navbar .navbar-brand.blacklogo:hover {
 	color: #252525;
 }
 
-body.home .navbar-light .navbar-nav .nav-link {
+body.home-page .navbar-light .navbar-nav .nav-link {
 	color: #fff;
 }
 
-body.home .navbar-light .navbar-nav .nav-link:hover {
+body.home-page .navbar-light .navbar-nav .nav-link:hover {
 	color: #252525;
 }
 
-body.home .navbar-light.scrolled .navbar-nav .nav-link {
+body.home-page .navbar-light.scrolled .navbar-nav .nav-link {
 	color: #252525;
 }
 
-body.home .navbar-light.scrolled .navbar-nav .nav-link:hover {
+body.home-page .navbar-light.scrolled .navbar-nav .nav-link:hover {
 	color: #252525;
 }
 
@@ -989,19 +1019,19 @@ body.home .navbar-light.scrolled .navbar-nav .nav-link:hover {
 	color: #00AEEF;
 }
 
-body.home .navbar-light .topmenu a {
+body.home-page .navbar-light .topmenu a {
 	color: #fff;
 }
 
-body.home .navbar-light .topmenu a:hover {
+body.home-page .navbar-light .topmenu a:hover {
 	color: #00AEEF;
 }
 
-body.home .navbar-light.scrolled .topmenu a {
+body.home-page .navbar-light.scrolled .topmenu a {
 	color: #252525;
 }
 
-body.home .navbar-light.scrolled .topmenu a:hover {
+body.home-page .navbar-light.scrolled .topmenu a:hover {
 	color: #00AEEF;
 }
 	
@@ -1060,11 +1090,11 @@ body.home .navbar-light.scrolled .topmenu a:hover {
 		margin: 0 auto 7px;
 }
 
-body.home .navbar-light .navbar-nav .dropdown-menu .nav-link {
+body.home-page .navbar-light .navbar-nav .dropdown-menu .nav-link {
 	color: #252525;
 }
 
-body.home .navbar-light .navbar-nav .bb-special-dropdown .dropdown-menu .nav-link:hover {
+body.home-page .navbar-light .navbar-nav .bb-special-dropdown .dropdown-menu .nav-link:hover {
 	color: #00AEEF;
 }
 
@@ -3879,7 +3909,7 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
 	padding: 0px;
 }
 
-input#inscription_checkbox.input-checkbox {
+input#inscription_checkbox.input-checkbox, input#vacation_terms.input-checkbox {
     display: inline-block;
     margin: 6px 4px 0 0;
     text-align: center;
@@ -4597,4 +4627,147 @@ NEW ORLEANS
 	.nolapaymentsection .paymentboxes {
 		width: 100%;
 	}
+}
+
+
+
+
+
+
+
+
+
+/**********************
+	DASHBOARD
+**********************/
+
+.dashboard-user {
+	width: 25%;
+	height: 100%;
+	background: #eaeaea;
+	margin: auto 0 auto auto;
+}
+
+img.dash-user-avatar {
+	border-radius: 50%;
+	display: table;
+	margin: 0 auto;
+	padding: 25px 0 10px;
+}
+
+ul.dash-vert-menu {
+	list-style-type: none;
+	-webkit-padding-start: 0px;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+ul.dash-vert-menu li a {
+	text-transform: uppercase;
+	color: #252525;
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	font-size: 14px;
+	font-weight: 900;
+}
+
+ul.dash-vert-menu li a:hover {
+	color: #00AEEF;
+}
+
+.user-menu-bar {
+	display: table; 
+	width: 100%; 
+	height: auto; 
+	background-color: #eaeaea;
+}
+
+.user-menu-bar .bp-navs, .user-menu-bar .menu-user-menu-container,
+.user-menu-bar .course-menu-container {
+	margin-top: auto;
+    margin-bottom: auto;
+    padding: 25px 0;
+}
+
+.buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links) {
+	border: none !important;
+	box-shadow: none !important;
+}
+
+ul.course-menu, ul.user-menu {
+	list-style-type: none;
+	-webkit-padding-start: 5px;
+	margin-bottom: 0;
+}
+
+ul.course-menu li, ul.user-menu li {
+	display: inline-block;
+	padding-right: 15px;
+}
+
+ul.course-menu li a, ul.user-menu li a, .bp-navs ul li a {
+	text-transform: uppercase;
+	color: #252525;
+	font-family: brandon-grotesque, sans-serif;
+	font-style: normal;
+	font-size: 14px;
+	font-weight: 900;
+}
+
+ul.course-menu li a:hover, ul.user-menu li a:hover, .bp-navs ul li:hover a {
+	color: #00AEEF;
+}
+
+.buddypress-wrap .bp-navs li:not(.current) a:focus, 
+.buddypress-wrap .bp-navs li:not(.current) a:hover, 
+.buddypress-wrap .bp-navs li:not(.selected) a:focus, 
+.buddypress-wrap .bp-navs li:not(.selected) a:hover {
+	color: #00AEEF;
+}
+
+
+/**********************
+	COURSE STYLES
+**********************/
+
+.coursebonuses {
+	background-color: #eaeaea; 
+	width: 100%; 
+	display: table; 
+	padding: 25px;
+	margin: 25px auto;
+}
+
+.coursebonuses .bonus-list h2 {
+	font-size: 14px;
+	line-height: 1.3;
+	display: list-item;   
+    list-style-type: disc; 
+    list-style-position: inside;
+}
+
+#shownote-wrapper .coursebonuses .bonus-list .ld-entry-content.entry-content {
+	margin: 0;
+}
+
+.coursebonuses .bonus-list .ld-course-list-items.row {
+	    margin-left: 0;
+    margin-right: 0;
+}
+
+#buddypress .groups-header #header-cover-image {
+	height: 350px !important;
+}
+
+#buddypress .groups-header #item-header-cover-image {
+	margin-bottom: 0;
+	height: 350px;
+}
+
+.groups-header .desc-wrap {
+	display: none;
+}
+
+.groups-header.single-headers {
+    margin-bottom: 0px;
 }

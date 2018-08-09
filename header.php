@@ -45,17 +45,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 		&noscript=1"/>
 		</noscript>
 	<!-- End Facebook Pixel Code -->
-	<!-- Hotjar Tracking Code for www.beingboss.club -->
-	<script>
-    		(function(h,o,t,j,a,r){
-        	h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        	h._hjSettings={hjid:563397,hjsv:6};
-        	a=o.getElementsByTagName('head')[0];
-        	r=o.createElement('script');r.async=1;
-        	r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        	a.appendChild(r);
-    		})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-	</script>
+
+
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+		<script>
+		window.addEventListener("load", function(){
+		window.cookieconsent.initialise({
+		  "palette": {
+		    "popup": {
+		      "background": "#252525",
+		      "text": "#ffffff"
+		    },
+		    "button": {
+		      "background": "#fff200",
+		      "text": "#252525"
+		    }
+		  },
+		  "position": "bottom-right",
+		  "content": {
+		    "message": "Hey boss! This website uses cookies to help us track things like analytics and user preferences.",
+		    "href": "https://beingboss.club/privacy"
+		  }
+		})});
+		</script>
+
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 
 	<!-- - - - - - - - - - End BEING BOSS Code  - - - - - - - - -  -->
 </head>

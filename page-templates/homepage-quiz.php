@@ -92,7 +92,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 											<div class="row">
 												<div class="col-md-4"><a href="/podcast"><img src="/wp-content/themes/beingboss2018/img/BB_Logo_Podcast.jpg"></a></div>
 												<div class="col-md-4"><a href="/10minutes"><img src="/wp-content/themes/beingboss2018/img/BB_Logo_10Minutes.jpg"></a></div>
-												<div class="col-md-4"><a href="/making-a-business"><img src="/wp-content/themes/beingboss2018/img/BB_Logo_MakingABusiness.jpg"></a></div>
+												<div class="col-md-4"><a href="/making-a-business"><img src="/wp-content/themes/beingboss2018/img/MakingABiz_Avatar_2.jpg"></a></div>
 											</div>
 										</div>
 									</div>

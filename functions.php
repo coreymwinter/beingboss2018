@@ -28,7 +28,7 @@ function theme_enqueue_styles() {
 function add_theme_scripts() {
   wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
   
-  wp_enqueue_script( 'custombb', get_stylesheet_directory_uri() . '/js/custombb.js', array(), false);
+  //wp_enqueue_script( 'custombb', get_stylesheet_directory_uri() . '/js/custombb.js', array(), false);
 
 }
 add_action( 'wp_enqueue_scripts', 'add_theme_scripts' );
@@ -72,6 +72,15 @@ function footer_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'Footer Copyright',
 		'id'            => 'footer_copyright',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Course Navigation',
+		'id'            => 'course_navigation',
 		'before_widget' => '<div>',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3>',

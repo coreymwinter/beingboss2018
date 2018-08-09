@@ -28,8 +28,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="col-md-7 footer-subscribe-right">
 					<div class="pagesection">
 						<p class="brandon large">CREATIVE + ENTREPRENEUR</p>
-						<p class="xmedium italic">Podcast notifications + episode extras to help you do the work.</p>
-						<?php echo do_shortcode('[content_block id=11678]'); ?>
+						<p class="xmedium italic">Get the scoop on how to be more boss.</p>
+						<form action="https://www.getdrip.com/forms/458596298/submissions" method="post" data-drip-embedded-form="458596298" class="fullwidthform">
+						  <div data-drip-attribute="description"></div>
+						    <div>
+						        <input type="text" id="drip-Name" name="fields[Name]" value="" placeholder="name" />
+						    </div>
+						    <div>
+						        <input type="email" id="drip-email" name="fields[email]" value="" placeholder="email address" />
+						    </div>
+						  <div>
+						    <input type="submit" class="button" value="SUBMIT" data-drip-attribute="sign-up-button" />
+						  </div>
+						</form>
+						<p class="center small padtop15">Subscribing indicates your consent to our <a href="/terms" target="_blank" class="blacklink underline">Terms of Use</a> &amp; <a href="/privacy" target="_blank" class="blacklink underline">Privacy Policy.</a></p>
 					</div>
 				</div><!--col end -->
 
@@ -74,19 +86,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="row" id="footer-social">
 					<div class="col-sm-6">
 						<h3>LISTEN</h3>
-						<ul>
-							<li><a href="https://itunes.apple.com/us/podcast/being-boss/id956310359"><img src="/wp-content/themes/beingboss2018/img/FooterIcon_Apple.png"></a></li>
-							<li><a href="https://play.google.com/music/listen?u=0#/ps/Ijagnvf6ruqcxffbhnjxmxl52zy"><img src="/wp-content/themes/beingboss2018/img/FooterIcon_Google.png"></a></li>
-							<li><a href="https://soundcloud.com/beingboss"><img src="/wp-content/themes/beingboss2018/img/FooterIcon_Soundcloud.png"></a></li>
+						<ul style="font-size: 24px;">
+							<li><a href="https://itunes.apple.com/us/artist/being-boss/1359403924" target="_blank"><i class="fab fa-apple"></i></a></li>
+							<li><a href="https://play.google.com/music/listen?u=0#/ps/Ijagnvf6ruqcxffbhnjxmxl52zy" target="_blank"><i class="fab fa-google-play"></i></a></li>
+							<li><a href="https://soundcloud.com/beingboss" target="_blank"><i class="fab fa-soundcloud"></i></a></li>
 						</ul>
 					</div>
 					<div class="col-sm-6">
 						<h3>FOLLOW</h3>
-						<ul>
-							<li><a href="https://www.instagram.com/beingbossclub/"><img src="/wp-content/themes/beingboss2018/img/FooterIcon_Instagram.png"></a></li>
-							<li><a href="https://twitter.com/beingbossclub"><img src="/wp-content/themes/beingboss2018/img/FooterIcon_Twitter.png"></a></li>
-							<li><a href="https://www.facebook.com/beingbossclub/"><img src="/wp-content/themes/beingboss2018/img/FooterIcon_Facebook.png"></a></li>
-							<li><a href="https://www.pinterest.com/beingboss/"><img src="/wp-content/themes/beingboss2018/img/FooterIcon_Pinterest.png"></a></li>
+						<ul style="font-size: 24px;">
+							<li><a href="https://www.instagram.com/beingbossclub/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://twitter.com/beingbossclub" target="_blank"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/beingbossclub/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.pinterest.com/beingboss/" target="_blank"><i class="fab fa-pinterest"></i></a></li>
 						</ul>
 					</div>
 				</div>
