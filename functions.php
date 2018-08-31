@@ -87,6 +87,69 @@ function footer_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 
+	register_sidebar( array(
+		'name'          => 'Dashboard - 1',
+		'id'            => 'dashboard_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Dashboard - 2',
+		'id'            => 'dashboard_2',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Dashboard - 3',
+		'id'            => 'dashboard_3',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Dashboard - 4',
+		'id'            => 'dashboard_4',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Dashboard - 4-2',
+		'id'            => 'dashboard_4_2',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Dashboard - 5',
+		'id'            => 'dashboard_5',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Lesson Sidebar',
+		'id'            => 'lesson_sidebar',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+	) );
+
 }
 add_action( 'widgets_init', 'footer_widgets_init' );
 
@@ -95,7 +158,6 @@ add_action( 'widgets_init', 'footer_widgets_init' );
 add_filter( 'body_class', function( $classes ) {
     return array_merge( $classes, array( 'drawer drawer--right' ) );
 } );
-
 
 
 

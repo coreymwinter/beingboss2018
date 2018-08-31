@@ -9,19 +9,18 @@
 
 	<?php bp_nouveau_member_hook( 'before', 'home_content' ); ?>
 
-	<div id="item-header" role="complementary" data-bp-item-id="<?php echo esc_attr( bp_displayed_user_id() ); ?>" data-bp-item-component="members" class="users-header single-headers">
-
-		<?php bp_nouveau_member_header_template_part(); ?>
-
-	</div><!-- #item-header -->
+	<figure class="bbpage-header" style="background-image: url('/wp-content/themes/beingboss2018/img/Back_Laptop_5.jpg');">
+		<div class="container">
+										
+		</div>
+	</figure>
 	<div class="bp-wrap">
-		<?php if ( ! bp_nouveau_is_object_nav_in_sidebar() ) : ?>
-			<div class="user-menu-bar">
-				<div class="container">
-					<?php bp_get_template_part( 'members/single/parts/item-nav' ); ?>
-				</div>
+		<?php get_template_part( '/template-parts/bp-user-menu' ); ?>
+		<div class="course-menu-bar" style="padding: 10px 0;">
+			<div class="container">
+				<?php bp_get_template_part( 'members/single/parts/item-nav' ); ?>
 			</div>
-		<?php endif; ?>
+		</div>
 		<div class="container">
 			<div id="item-body" class="item-body">
 

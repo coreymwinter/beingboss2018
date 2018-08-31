@@ -72,6 +72,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 
+
 	<!-- - - - - - - - - - End BEING BOSS Code  - - - - - - - - -  -->
 </head>
 
@@ -133,15 +134,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 							'menu_class'      => 'navbar-nav-mobile',
 							'fallback_cb'     => '',
 							'menu_id'         => 'main-menu-mobile',
-							'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 						)
 					); ?>
+
+					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>" id="mobile-search">
+							<input name="s" type="search" placeholder="Search">
+					</form>
 				</nav>
 				<!-- The WordPress Menu goes here -->
 				<div class="menuright">
 					<div class="topmenu">
 						<a href="/about">ABOUT</a>
 						<a href="/press">PRESS</a>
+						<?php if ( !is_user_logged_in() ) { ?>
+							<a href="/login">LOGIN</a>
+						<?php } else { ?>
+							<a href="<?php echo wp_logout_url(); ?>">LOG OUT</a>
+						<?php } ?>
 						<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>" id="top-search">
 							<input name="s" type="search" placeholder="Search">
 						</form>

@@ -11,7 +11,9 @@
 	<div id="header-cover-image"></div>
 
 	<div id="item-header-cover-image">
-		
+		<div class="headertext">
+			<h1 class="center white huge"><?php the_title(); ?></h1>
+		</div>	
 
 	</div><!-- #item-header-cover-image -->
 

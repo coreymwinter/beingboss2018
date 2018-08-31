@@ -25,6 +25,7 @@ get_header();
 							<?php $shownote_topics = get_post_meta( $postid, 'bbshownotes_topics', true ); ?>
 							<?php $shownote_resources = get_post_meta( $postid, 'bbshownotes_resources', true ); ?>
 							<?php $fullwidth_optin = get_post_meta( get_the_ID(), 'bbshownotes_optin_select', true ); ?>
+							<?php $comment_prompt = get_post_meta( $postid, 'bbshownotes_comment_prompt', true ); ?>
 
 						<header class="entry-header">
 
@@ -133,7 +134,19 @@ get_header();
 											<div class="shownote_pinit"><?php cmb2_bbshownotes_pinterest_images( 'bbshownotes_pinitimages', 'large' ); ?></div>
 										<?php } ?>
 
+										<?php if ( !empty( $comment_prompt ) ) { ?>
+											<div>
+												<h3 class="gray">PROMPT:</h3>
+												<p class="comment-prompt"><?php echo $comment_prompt; ?></p>
+											</div>
+										<?php } ?>
+
+										<?php if ( !empty( $comment_prompt ) ) { ?>
+										<div class="padbot50">
+										<?php } ?>
+										<?php if ( empty( $comment_prompt ) ) { ?>
 										<div class="pagesection50">
+										<?php } ?>
 											<?php
 												// If comments are open or we have at least one comment, load up the comment template.
 												if ( comments_open() || get_comments_number() ) :
@@ -177,17 +190,24 @@ get_header();
 										</div>
 									</div>
 								</div>
-								
-								<div class="shownote_nav">
-									<div class="previouslink"><?php previous_post_link('%link', '<< PREVIOUS EPISODE'); ?></div>
-									<div class="nextlink"><?php next_post_link('%link', 'NEXT EPISODE >>'); ?></div>
-								</div>
-								
+
 							</div><!-- .entry-content -->
 
 						</div>
-						
-						<footer class="entry-footer" style="background: #eaeaea;">
+
+					</article><!-- #post-## -->
+
+				<?php endwhile; // end of the loop. ?>
+				<?php wp_reset_postdata(); ?>
+
+				<div class="container">
+					<div class="shownote_nav">
+						<div class="previouslink"><?php previous_post_link('%link', '<< PREVIOUS EPISODE'); ?></div>
+						<div class="nextlink"><?php next_post_link('%link', 'NEXT EPISODE >>'); ?></div>
+					</div>
+				</div>
+
+				<footer class="entry-footer" style="background: #eaeaea;">
 							<div class="container pagesection80">
 								<h2 class="large center">YOU MAY ALSO LIKE</h2>
 								<hr class="short">
@@ -195,7 +215,7 @@ get_header();
 							<?php
 								// The Query
 								
-								$related_terms = get_the_terms(get_the_ID(), 'related-resources');
+								$related_terms = get_the_terms($postid, 'related-resources');
 								if ( $related_terms && !is_wp_error( $related_terms ) ) {
 									$term_list = wp_list_pluck( $related_terms, 'slug' );
 								
@@ -257,10 +277,6 @@ get_header();
 							</div>
 
 						</footer><!-- .entry-footer -->
-
-					</article><!-- #post-## -->
-
-				<?php endwhile; // end of the loop. ?>
 
 			</main><!-- #main -->
 
