@@ -3,6 +3,7 @@
  * The template for displaying all single product posts.
  *
  * @package understrap
+ * @version 1.6.4
  */
 
 get_header();

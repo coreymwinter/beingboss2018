@@ -31,9 +31,13 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 
 						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
+							<?php $page_content = get_post_meta( $postid, 'bbpage_content', true ); ?>
 							<div class="entry-content" style="padding-top:<?php echo $toppadding; ?>px">
-
-								<?php the_content(); ?>
+								<?php if ( $page_content ) {
+										echo $page_content;
+									} else {
+										the_content(); 
+									} ?>
 
 							</div><!-- .entry-content -->
 

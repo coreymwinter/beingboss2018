@@ -5,6 +5,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package understrap
+ * @version 3.4.0
  */
 
 get_header();
@@ -19,8 +20,9 @@ get_header();
 		<div class="row">
 
 			<main class="site-main" id="main">
+					<?php $islive = '0'; ?>
 
-					<?php if ( !is_user_logged_in() ) { ?>
+					<?php if ( $islive == '0' ) { ?>
 						<div class="imagebackground" style="background-image: url('/wp-content/uploads/2018/02/Back_Smoke_1.jpg');">
 							<div class="container">
 								<div class="capsule pagesection50">
@@ -33,7 +35,7 @@ get_header();
 								</div>
 							</div>
 						</div>
-						<div class="container">
+						<div class="container pagebot50">
 							<a href="/nola2018" target="_blank" style="margin: 50px auto 0; display: table;"><img src="/wp-content/uploads/2018/06/Instagram_NOLA.jpg"></a><br>
 							<a href="/book" target="_blank" style="margin: 0 auto 0; display: table;"><img src="/wp-content/uploads/2018/06/Instagram_Book.jpg"></a><p></p>
 						</div>

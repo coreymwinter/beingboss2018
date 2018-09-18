@@ -9,18 +9,15 @@ $toppadding = get_post_meta( $postid, 'bbpage_top_padding', true );
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<div class="entry-content" style="padding-top:<?php echo $toppadding; ?>px">
+	<?php $page_content = get_post_meta( $postid, 'bbpage_content', true ); ?>
+							<div class="entry-content" style="padding-top:<?php echo $toppadding; ?>px">
+								<?php if ( $page_content ) {
+										echo $page_content;
+									} else {
+										the_content(); 
+									} ?>
 
-		<?php the_content(); ?>
-
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
-
-	</div><!-- .entry-content -->
+							</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 

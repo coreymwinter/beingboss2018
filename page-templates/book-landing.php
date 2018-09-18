@@ -54,10 +54,10 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 								<?php the_content(); ?>
 
 								<div class="container">
-									<div class="pagesection80 padbot0">
+									<div class="pagesection50">
 										<div class="row">
 											<div class="col-lg-12">
-												<h2 class="center h1 xlarge">BOOK TOUR</h2>
+												<h2 class="center xlarge">BOOK TOUR</h2>
 												<hr class="even" />
 												<?php echo do_shortcode('[searchandfilter id="11228"]'); ?>
 												<?php echo do_shortcode('[searchandfilter id="11228" show="results"]'); ?>
@@ -67,7 +67,7 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 								</div>
 								<div class="container">
 									<div class="capsule pagesection80">
-										<h2 class="center h1 xlarge">MEET EMILY + KATHLEEN</h2>
+										<h2 class="center xlarge">MEET EMILY + KATHLEEN</h2>
 												<hr class="even" />
 										<?php echo do_shortcode('[content_block slug=content-e-k-bio]'); ?>
 									</div>
