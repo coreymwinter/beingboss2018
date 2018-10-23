@@ -86,7 +86,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<div class="row" id="footer-social">
 					<div class="col-sm-6">
 						<h3>LISTEN</h3>
-						<ul style="font-size: 24px;">
+						<ul>
 							<li><a href="https://itunes.apple.com/us/artist/being-boss/1359403924" target="_blank"><i class="fab fa-apple"></i></a></li>
 							<li><a href="https://play.google.com/music/listen?u=0#/ps/Ijagnvf6ruqcxffbhnjxmxl52zy" target="_blank"><i class="fab fa-google-play"></i></a></li>
 							<li><a href="https://soundcloud.com/beingboss" target="_blank"><i class="fab fa-soundcloud"></i></a></li>
@@ -94,7 +94,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					</div>
 					<div class="col-sm-6">
 						<h3>FOLLOW</h3>
-						<ul style="font-size: 24px;">
+						<ul>
 							<li><a href="https://www.instagram.com/beingbossclub/" target="_blank"><i class="fab fa-instagram"></i></a></li>
 							<li><a href="https://twitter.com/beingbossclub" target="_blank"><i class="fab fa-twitter"></i></a></li>
 							<li><a href="https://www.facebook.com/beingbossclub/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>

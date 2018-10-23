@@ -5,7 +5,7 @@
  Author:       Corey Winter
  Author URI:   http://www.beingboss.club
  Template:     understrap
- Version:      1.5.5
+ Version:      1.7.0
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  beingboss2018
@@ -86,6 +86,13 @@ hr.short {
 hr.even {
 	width: 140px;
 	margin: 0px auto 40px;
+	background: #252525;
+	height: 0px;
+}
+
+hr.extrashort {
+	width: 100px;
+	margin: -5px auto 20px;
 	background: #252525;
 	height: 0px;
 }
@@ -321,7 +328,7 @@ img.imagecircle {
     }
 }
 
-@media screen and (min-width: 760px) and (max-width: 980px) {
+@media screen and (min-width: 760px) and (max-width: 991px) {
     .mobilehide {
         display: none;
     }
@@ -397,7 +404,7 @@ img.imagecircle {
 	margin-bottom: 0;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 991px) {
 	.minusleftmargin125, .minusrightmargin125 {
 		margin: 0 auto;
 	}
@@ -927,7 +934,7 @@ button.tve-froala {
 }
 
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 991px) {
 	.pageleft, .pageright {
 		float: none;
 		width: 100%;
@@ -1402,6 +1409,11 @@ ul#menu-footer-info, ul#menu-footer-content, ul#menu-footer-join-us {
 
 #wrapper-footer ul li a {
 	font-size: 14px !important;
+	line-height: 1.3 !important;
+}
+
+#wrapper-footer #footer-social ul li a {
+	font-size: 28px !important;
 	line-height: 1.3 !important;
 }
 
@@ -2281,7 +2293,7 @@ img.bookimage {
 }
 
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 991px) {
 	img.bookimage {
 		    margin-top: 25px;
     			margin-bottom: 25px;
@@ -2314,7 +2326,7 @@ img.bookimage {
 	margin: 80px auto 50px;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 991px) {
 	#downloadkit {
 		margin-top: 0;
 	}
@@ -2366,7 +2378,7 @@ img.bookimage {
         color: #252525;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 991px) {
     .libraryleft, .libraryright {width: 100%; float: none;}
 }
 
@@ -2425,8 +2437,10 @@ h1.shownote-title {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.shownote_intro {
-	padding-top: 30px;
+@media screen and (max-width: 767px) {
+	.shownote_intro {
+		padding-top: 30px;
+	}
 }
 
 .shownote_quote {
@@ -3249,8 +3263,8 @@ h2.eventitemtitle a:hover {
 }
 
 .vacationitem {
-	width: 300px;
-    	margin: 10px 25px 25px;
+	width: 225px;
+    margin: 10px 15px 25px;
 	background-color: #fff;
 }
 
@@ -3294,10 +3308,10 @@ a.vacationitemreadmore {
 	font-family: brandon-grotesque, sans-serif;
 }
 
-.vacationitemvideo {
+p.vacationitemvideo {
 	color: #252525;
-    	padding: 0;
-	font-size: 12px;
+    padding: 0;
+	font-size: 12px !important;
 	font-family: brandon-grotesque, sans-serif;
 }
 
@@ -3312,12 +3326,27 @@ a.vacationitemreadmore:hover {
 	cursor: pointer;
 }
 
-
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 992px) {
 	.vacationcontainer {
     		-webkit-justify-content: center;
     		justify-content: center;
+	}
+
+	.vacationitem {
+	    width: 300px;
+	    margin: 10px 15px 25px;
+	}
+}
+
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+	.vacationcontainer {
+    		-webkit-justify-content: center;
+    		justify-content: center;
+	}
+
+	.vacationitem {
+	    width: 325px;
+	    margin: 10px 30px 25px;
 	}
 }
 
@@ -5278,23 +5307,54 @@ ul.course-menu li a:hover, ul.user-menu li a:hover, .bp-navs ul li:hover a, ul.d
 }
 
 .dashboard .avatar-block .item-avatar {
-	display: inline-block;
-	width: 23%;
-	margin: 0 1% 15px;
+    display: inline-block;
+    width: 7%;
+    margin: 10px .6%;
+    text-align: center;
+}
+
+.dashboard .avatar-block .item-avatar img {
+	border-radius: 50%;
+}
+
+@media screen and (max-width: 550px) {
+	.dashboard .avatar-block .item-avatar {
+	    display: inline-block;
+	    width: 25%;
+	    margin: 10px 0;
+	}
+}
+
+@media screen and (min-width: 551px) and (max-width: 1200px) {
+	.dashboard .avatar-block .item-avatar {
+	    display: inline-block;
+	    width: 15%;
+	    margin: 10px .6%;
+	}
 }
 
 .dashboard .dashboard-widget .archivecontainer {
-	width: 90%;
+	width: 100%;
 	margin: 15px auto 0;
-	-webkit-justify-content: center;
-    justify-content: center;
+	-webkit-justify-content: space-between;
+    justify-content: space-between;
 }
 
 .dashboard .dashboard-widget .archiveitem {
-	width: 300px;
+	width: 350px;
+	box-shadow: none;
+	margin: 10px 0 25px;
 }
+
+.dashboard .dashboard-widget .archiveitemimage {
+    min-height: 108px;
+    background: linear-gradient(to right, #00AEEF, #FFF200);
+    position: relative;
+}
+
 .dashboard .dashboard-widget .archiveitem .archiveitemcontent {
 	padding: 30px 35px;
+	border: 1px solid #eaeaea;
 }
 
 .dashboard .dashboard-widget .archiveitem h5 {
@@ -5331,13 +5391,19 @@ ul.course-menu li a:hover, ul.user-menu li a:hover, .bp-navs ul li:hover a, ul.d
 	.dashboard .dashboard-widget .archiveitem {
 		width: 100%;
 	}
+
+	.dashboard .dashboard-widget .archiveitemimage img {
+		width: 100%;
+	}
 }
 
-.dashboard .dashboard-widget .archiveitemimage {
-    min-height: 108px;
-    background: linear-gradient(to right, #00AEEF, #FFF200);
-    position: relative;
+@media screen and (max-width: 1200px) {
+	.dashboard .dashboard-widget .archivecontainer {
+		-webkit-justify-content: center;
+    	justify-content: center;
+	}
 }
+
 
 .dashboard .dashboard-widget.recent-topics ul {
     border: 1px solid #eaeaea;
@@ -5423,6 +5489,144 @@ ul.course-menu li a:hover, ul.user-menu li a:hover, .bp-navs ul li:hover a, ul.d
 
 .dashboard .widget_shopping_cart_content p.woocommerce-mini-cart__total.total {
 	text-align: center;
+}
+
+.dashboard-widget.user-orders h2 {
+	display: none;
+}
+
+.dashboard-widget.user-orders table.my_account_orders {
+	width: 100%;
+	margin: 30px auto;
+}
+
+.dashboard-widget.user-orders table.my_account_orders tbody tr {
+	border-bottom: 1px solid #eaeaea;
+}
+
+.dashboard-widget.user-orders table.my_account_orders tbody td.order-actions {
+	padding: 15px 0;
+}
+
+.dashboard-widget.user-orders table.my_account_orders tbody tr:nth-of-type(odd) {
+    background: none;
+}
+
+.dashboard-widget.user-orders table.my_account_orders .button-yellow {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+	padding: 5px 15px;
+}
+
+.dashboard-content .club_upcoming_event {
+	display: table;
+	width: 100%;
+	text-align: center;
+}
+
+.dashboard-content .club_upcoming_event .two-hosts img {
+	border-radius: 50%;
+	border: 3px solid #fff;
+	width: 150px;
+	margin: 0 15px;
+}
+
+.dashboard-content .club_upcoming_event .three-guests img {
+	border-radius: 50%;
+	border: 3px solid #fff;
+	width: 165px;
+    margin: 0 25px;
+}
+
+.dashboard-content .club_upcoming_event .four-guests img {
+	border-radius: 50%;
+	border: 3px solid #fff;
+	width: 150px;
+	margin: 0 5px;
+}
+
+@media screen and (max-width: 500px) {
+	.dashboard-content .club_upcoming_event .four-guests img {
+		width: 125px;
+		margin: 5px;
+	}
+}
+
+@media screen and (min-width: 501px) and (max-width: 767px) {
+	.dashboard-content .club_upcoming_event .four-guests img {
+		width: 100px;
+		margin: 5px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+	.dashboard-content .club_upcoming_event .four-guests img {
+		width: 90px;
+    	margin: 2px;
+	}
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+	.dashboard-content .club_upcoming_event .four-guests img {
+		width: 125px;
+    	margin: 0 5px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.dashboard-notice p.giant, .dashboard-notice p.fs64 {
+		font-size: 50px !important;
+	}
+
+	.dashboard-notice .button, 
+	.dashboard-notice .buybutton, 
+	.dashboard-notice .button-yellow, 
+	.dashboard-notice .button-pink, 
+	.dashboard-notice .btn-primary, 
+	.dashboard-notice .buddypress .buddypress-wrap .generic-button a, 
+	.dashboard-notice .button-yellow-blue, 
+	.dashboard-notice .button-yellow-pink, 
+	.dashboard-notice .button-black-pink, 
+	.dashboard-notice .button-pink-black, 
+	.dashboard-notice .button-blue-black, 
+	.dashboard-notice .button-blue {
+		max-width: 100%;
+		padding: 10px 10px;
+	}
+
+	.dashboard-content .club_upcoming_event .three-guests img {
+		width: 100px;
+		margin: 0 5px;
+	}
+
+	.dashboard-content .club_upcoming_event .two-hosts img {
+		width: 115px;
+    	margin: 0 10px;
+	}
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+	.dashboard-content .club_upcoming_event .three-guests img {
+		width: 125px;
+	}
+}
+
+.mycred-rank-progress .rank-progress-bar {
+	width: 100%;
+	border: 2px solid #eaeaea;
+	border-radius: 50px;
+	height: 30px;
+	background-color: #fff;
+	overflow: hidden;
+	display: table;
+	margin-bottom: 15px;
+}
+
+.mycred-rank-progress .rank-progress-bar span.progress-width {
+	background-color: #00AEEF;
+	display: table;
+	height: 30px;
 }
 
 

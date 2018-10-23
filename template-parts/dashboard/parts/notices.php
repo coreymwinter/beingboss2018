@@ -7,7 +7,7 @@
 			$notice_query = new WP_Query( $notice_args );
 
 			if ( $notice_query->have_posts() ) { ?>
-				<div style="margin-bottom: 35px;">
+				<div class="dashboard-notice" style="margin-bottom: 35px;">
 				
 					<?php while ($notice_query->have_posts()) {
 						$notice_query->the_post();
