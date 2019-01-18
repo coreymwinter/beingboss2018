@@ -125,13 +125,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
-<?php $pagescripts = get_post_meta( get_the_ID(), 'bbpage_footer_scripts', true );
-
-	if (! empty($pagescripts) ) { 
-		echo $pagescripts;
-	} 
-?>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
 <script src="/wp-content/themes/beingboss2018/drawer/drawer.min.js" charset="utf-8"></script>
@@ -155,6 +148,12 @@ $container = get_theme_mod( 'understrap_container_type' );
   })();
 </script>
 <!-- end Drip -->
+<script>
+	jQuery(document).ready(function(){
+		 var iFrameDOM = jQuery("iframe#dsq-app1071").contents();
+		iFrameDOM.find("li.sso").css("display", "none");
+	});
+</script>
 <script>
 		window.onload = onPageLoad();
 		function onPageLoad() {

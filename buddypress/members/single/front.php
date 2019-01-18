@@ -71,7 +71,6 @@
 
 							<!-- <?php hibuddy_send_private_message_button(); ?> -->
 		
-							<div style="margin-top: 15px;"><?php get_template_part( '/template-parts/communitycomingsoon' ); ?></div>
 
 						</div>
 					</div>

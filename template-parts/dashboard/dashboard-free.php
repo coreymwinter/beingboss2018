@@ -8,10 +8,6 @@
 	<div class="col-md-4">
 		<?php get_template_part( '/template-parts/dashboard/parts/notices' ); ?>
 
-		<div class="dashboard-widget">
-			<?php get_template_part( '/template-parts/communitycomingsoon' ); ?>
-		</div>
-
 	</div>
 
 	<div class="col-md-8">
@@ -24,8 +20,9 @@
 
 		<div class="dashboard-widget padbot30">
 			<h3>PURCHASED MATERIAL</h3>
-			<p class="center padtop30">What?! You have no material yet.</p>
-			<a href="#" class="button">SHOP ALL MATERIAL</a>
+			<p class="center padtop30">What?! You haven't purchased any material yet.</p>
+			<p class="center">Just purchase something but it's not showing here? Don't worry. It can take a minute or two to show up!</p>
+			<a href="/materials" class="button">SHOP ALL MATERIAL</a>
 		</div>
 
 		<?php get_template_part( '/template-parts/dashboard/parts/freematerial' ); ?>

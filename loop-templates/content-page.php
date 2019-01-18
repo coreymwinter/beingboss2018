@@ -26,3 +26,10 @@ $toppadding = get_post_meta( $postid, 'bbpage_top_padding', true );
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
+
+<?php $pagescripts = get_post_meta( get_the_ID(), 'bbpage_footer_scripts', true );
+
+	if (! empty($pagescripts) ) { 
+		echo $pagescripts;
+	} 
+?>

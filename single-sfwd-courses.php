@@ -148,7 +148,7 @@ $postid = get_the_ID();
 											<?php wp_reset_postdata(); ?>
 											<?php } ?>	
 
-											<?php 
+											<!-- <?php 
 												$testimonial_quote = get_post_meta( get_the_ID(), 'bbcoursedetails_testimonial_quote', true );
 												$testimonial_author = get_post_meta( get_the_ID(), 'bbcoursedetails_testimonial_author', true );
 											?>
@@ -160,7 +160,7 @@ $postid = get_the_ID();
 														<p class="brandon smallmedium right"><?php echo $testimonial_author; ?></p>
 													</div>
 												<?php } ?>
-											<?php } ?>
+											<?php } ?> -->
 										</div>
 									</div> <!-- end sidebar -->
 								</div>

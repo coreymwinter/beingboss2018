@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Login Page
+ * Template Name: Register Page
  *
  *
  * @package understrap
@@ -24,7 +24,7 @@ $postid = get_the_ID();
 
 						<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-							<div class="entry-content">
+							<div class="entry-content" id="registerpage">
 
 								<?php if ( is_user_logged_in() ) { ?>
 									<div class="imagebackground" style="background-image: url('/wp-content/uploads/2018/08/Back_Laptop_2.jpg');">
@@ -40,10 +40,11 @@ $postid = get_the_ID();
 									<div class="imagebackground" style="background-image: url('/wp-content/uploads/2018/08/Back_Laptop_2.jpg');">
 										<div class="container" style="padding: 100px 0;">
 											<div style="width: 90%; max-width: 400px; margin: 0 auto; display: table;">
-												<div class="whitesection" style="padding: 40px 0 50px;">
-													<?php the_content(); ?>
+												<div class="whitesection" style="padding: 50px 0;">
+													<h2 class="center">REGISTER</h2>
+													<div style="width: 75%; margin: 0 auto; display: table;"><?php the_content(); ?></div>
 													<div class="padtop30">
-														<a href="https://beingboss.club/register" class="button-pink">Not a member?</a>
+														<a href="https://beingboss.club/login" class="button-pink">Already a member?</a>
 													</div>
 												</div>
 											</div>

@@ -146,6 +146,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="topmenu">
 						<a href="/about">ABOUT</a>
 						<a href="/press">PRESS</a>
+						<a href="/dashboard">DASHBOARD</a>
 						<?php if ( !is_user_logged_in() ) { ?>
 							<a href="/login">LOGIN</a>
 						<?php } else { ?>

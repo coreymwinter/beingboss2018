@@ -35,8 +35,7 @@ get_header();
 								</div>
 							</div>
 						</div>
-						<div class="container pagebot50">
-							<a href="/nola2018" target="_blank" style="margin: 50px auto 0; display: table;"><img src="/wp-content/uploads/2018/06/Instagram_NOLA.jpg"></a><br>
+						<div class="container pagesection50">
 							<a href="/book" target="_blank" style="margin: 0 auto 0; display: table;"><img src="/wp-content/uploads/2018/06/Instagram_Book.jpg"></a><p></p>
 						</div>
 
