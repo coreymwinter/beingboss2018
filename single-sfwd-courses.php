@@ -99,11 +99,11 @@ $postid = get_the_ID();
 
 										<?php the_content(); ?>
 
-										<?php if (!empty ($associated_forum_id)) { ?>
+										<!-- <?php if (!empty ($associated_forum_id)) { ?>
 											<div style="display: block; clear: both;">
 												<a class="button-yellow" href="<?php echo $associated_forum; ?>">JOIN THE DISCUSSION</a>
 											</div>
-										<?php } ?>
+										<?php } ?> -->
 			
 									</div>
 									<div class="col-md-4">

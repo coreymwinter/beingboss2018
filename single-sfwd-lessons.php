@@ -84,11 +84,11 @@ $courseid = get_post_meta( $lessonid, 'course_id', true );
 									<div class="col-md-8 lesson-content">
 										<?php the_title( '<h1 class="padbot30 marginbottom0">', '</h1>' ); ?>
 										<?php the_content(); ?>
-										<?php if (!empty ($associated_forum_id)) { ?>
+										<!-- <?php if (!empty ($associated_forum_id)) { ?>
 											<div style="display: block; clear: both;">
 												<a class="button-yellow" href="<?php echo $associated_forum; ?>">JOIN THE DISCUSSION</a>
 											</div>
-										<?php } ?>
+										<?php } ?> -->
 			
 									</div>
 									<div class="col-md-4">

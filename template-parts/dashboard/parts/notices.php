@@ -25,7 +25,7 @@
 					?>
 
 					<div style="width: 100%; height: auto; padding: 30px; display: table; background-color: <?php echo $notice_bg_color; ?>;">
-						<p style="color: <?php echo $notice_text_color; ?>;" class="giant lust"><?php echo $notice_header; ?></p>
+						<p style="color: <?php echo $notice_text_color; ?>;" class="fs42 lust"><?php echo $notice_header; ?></p>
 						<p class="medium" style="color: <?php echo $notice_text_color; ?>;"><?php echo $notice_summary; ?></p>
 						<p class="white italic small">Last updated <?php echo $notice_modified_date; ?></p>
 						<?php if (!empty($notice_link)) { ?>

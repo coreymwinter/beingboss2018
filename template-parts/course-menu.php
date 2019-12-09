@@ -26,8 +26,8 @@
 										<li><span class="brandon mediumsmall">FOR THIS COURSE: </span></li>
 										<li><a href="/courses/<?php echo $course_slug; ?>">HOME</a></li>
 									<?php if ( !empty( $course_group ) ) { ?>
-										<li><a href="/groups/<?php echo $course_slug; ?>/forum/">FORUM</a></li>
-										<li><a href="/groups/<?php echo $course_slug; ?>/members/">MEMBERS</a></li>
+										<!-- <li><a href="/groups/<?php echo $course_slug; ?>/forum/">FORUM</a></li> -->
+										<!-- <li><a href="/groups/<?php echo $course_slug; ?>/members/">MEMBERS</a></li> -->
 									<?php } ?>
 								</ul>
 							<?php }
@@ -44,8 +44,8 @@
 										<li><span class="brandon mediumsmall">FOR THIS COURSE: </span></li>
 										<li><a href="/courses/<?php echo $parent_slug; ?>">HOME</a></li>
 									<?php if ( !empty( $course_group ) ) { ?>
-										<li><a href="/groups/<?php echo $parent_slug; ?>/forum/">FORUM</a></li>
-										<li><a href="/groups/<?php echo $parent_slug; ?>/members/">MEMBERS</a></li>
+										<!-- <li><a href="/groups/<?php echo $parent_slug; ?>/forum/">FORUM</a></li> -->
+										<!-- <li><a href="/groups/<?php echo $parent_slug; ?>/members/">MEMBERS</a></li> -->
 									<?php } ?>
 								</ul>
 							<?php }
@@ -94,8 +94,8 @@
 						?>
 										<li><a href="/courses/<?php echo $course_slug; ?>">HOME</a></li>
 									<?php if ( !empty( $course_group ) ) { ?>
-										<li><a href="/groups/<?php echo $course_slug; ?>/forum/">FORUM</a></li>
-										<li><a href="/groups/<?php echo $course_slug; ?>/members/">MEMBERS</a></li>
+										<!-- <li><a href="/groups/<?php echo $course_slug; ?>/forum/">FORUM</a></li> -->
+										<!-- <li><a href="/groups/<?php echo $course_slug; ?>/members/">MEMBERS</a></li> -->
 									<?php } ?>
 							<?php }
 							else { 
@@ -108,8 +108,8 @@
 							?>
 										<li><a href="/courses/<?php echo $parent_slug; ?>">HOME</a></li>
 									<?php if ( !empty( $course_group ) ) { ?>
-										<li><a href="/groups/<?php echo $parent_slug; ?>/forum/">FORUM</a></li>
-										<li><a href="/groups/<?php echo $parent_slug; ?>/members/">MEMBERS</a></li>
+										<!-- <li><a href="/groups/<?php echo $parent_slug; ?>/forum/">FORUM</a></li> -->
+										<!-- <li><a href="/groups/<?php echo $parent_slug; ?>/members/">MEMBERS</a></li> -->
 									<?php } 
 								} ?>
 					</ul>

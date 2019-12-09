@@ -1,6 +1,6 @@
-<div style="background-color: #f9c1d9;">
+<div class="imagebackground" style="background-image: url('/wp-content/uploads/2019/11/Comm_Header_Back.jpg');">
 	<div class="capsule pagesection30">
-		<i class="fa fa-lock white iconcenter large padbot15" aria-hidden="true"></i>
-		<p class="center brandon medium white">JOIN THE CLUB!<br />COMING SOON</p>
+		<p class="center"><img src="/wp-content/uploads/2019/11/Comm_Logo.png"></p>
+		<a href="/community" class="button-yellow">JOIN THE COMMUNITY!</a>
 	</div>
 </div>
