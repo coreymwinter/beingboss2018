@@ -30,7 +30,7 @@ $postid = get_the_ID();
 									<div class="imagebackground" style="background-image: url('/wp-content/uploads/2018/08/Back_Laptop_2.jpg');">
 										<div class="container" style="padding: 100px 0;">
 											<div style="width: 90%; max-width: 500px; margin: 0 auto; display: table;">
-												<div class="whitesection" style="padding: 40px 0 50px;">
+												<div class="whitesection" style="padding: 40px 40px 50px;">
 													<a href="/dashboard" class="button-yellow">GO TO YOUR DASHBOARD</a>
 												</div>
 											</div>
@@ -40,7 +40,7 @@ $postid = get_the_ID();
 									<div class="imagebackground" style="background-image: url('/wp-content/uploads/2018/08/Back_Laptop_2.jpg');">
 										<div class="container" style="padding: 100px 0;">
 											<div style="width: 90%; max-width: 400px; margin: 0 auto; display: table;">
-												<div class="whitesection" style="padding: 40px 0 50px;">
+												<div class="whitesection" style="padding: 40px 40px 50px;">
 													<?php the_content(); ?>
 													<div class="padtop30">
 														<a href="https://beingboss.club/register" class="button-pink">Not a member?</a>

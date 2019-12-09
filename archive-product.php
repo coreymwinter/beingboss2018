@@ -15,96 +15,202 @@ get_header();
 
 <div class="wrapper" id="full-width-page-wrapper" style="padding: 0px 0;">
 
-	<div class="container-fluid product-archive" id="content" tabindex="-1">
+	<div class="container product-archive" id="content" tabindex="-1">
 
 		<div class="row">
 
+			<div class="col">
+
 			<main class="site-main" id="main">
-					<?php $islive = '0'; ?>
 
-					<?php if ( $islive == '0' ) { ?>
-						<div class="imagebackground" style="background-image: url('/wp-content/uploads/2018/02/Back_Smoke_1.jpg');">
-							<div class="container">
-								<div class="capsule pagesection50">
-									<p class="brandon white lustbig center">CEO Day Kit</p>
-									<p class="center white large italic">12 months of focused<br /> 
-										planning for your business<br />
-										in just one day.
-									</p>
-									<a class="button-yellow center margintop30" href="https://courses.beingboss.club" target="_blank">LEARN MORE</a>
-								</div>
+				<header class="entry-header" style="padding-top: 30px;">
+					<div class="row">
+						<div class="col">
+							<ul class="shopmenu">
+								<li><a href="#courses">COURSES</a></li>
+								<li><a href="#masterclasses">MASTERCLASSES</a></li>
+								<li><a href="#books">BOOKS</a></li>
+								<li><a href="#tools">TOOLS</a></li>
+							</ul>
+						</div>
+					</div>
+				</header><!-- .entry-header -->
+
+
+				<div class="pagesection50">
+					<h2 id="courses">COURSES</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="archive-product">
+								<a href="https://courses.beingboss.club">
+									<span class="product-image">
+										<img src="/wp-content/themes/beingboss2018/img/Shop_CEODAYKit.jpg">
+									</span>
+									<span class="product-meta">
+										<span class="product-title">CEO DAY KIT</span>
+										<span class="product-price">$279</span>
+									</span>
+								</a>
 							</div>
 						</div>
-						<div class="container pagesection50">
-							<a href="/book" target="_blank" style="margin: 0 auto 0; display: table;"><img src="/wp-content/uploads/2018/06/Instagram_Book.jpg"></a><p></p>
+						<div class="col-md-6">
+							<div class="archive-product">
+								<a href="https://podcastlikeaboss.com" target="_blank">
+									<span class="product-image">
+										<img src="/wp-content/themes/beingboss2018/img/Shop_PLAB.jpg">
+									</span>
+									<span class="product-meta">
+										<span class="product-title">PODCAST LIKE A BOSS</span>
+										<span class="product-price">$219</span>
+									</span>
+								</a>
+							</div>
 						</div>
+					</div>
 
-					<?php } else { ?>
 
-						<header class="entry-header">
+					<h2 id="masterclasses" class="padtop50">MASTERCLASSES</h2>
+					<div class="masterclasscontainer">
 
-								<figure class="bbpage-header" style="background-image: url('/wp-content/themes/beingboss2018/img/Back_Laptop_5.jpg');">
-									<div class="container">
-										<div class="headertext">
-											<h1 class="center white huge">BEING BOSS SHOP</h1>
-										</div>
-									</div>
-								</figure>
+						<?php 
+							$masterclasses_args = array(
+								'post_type' => array( 'product' ),
+								'tax_query' => array(
+									array(
+										'taxonomy' => 'product_cat',
+										'field'    => 'slug',
+										'terms'    => 'masterclass',
+									),
+								),
+								'orderby'        => 'title',
+								'order'			=> 'ASC',
+							);
 
-						</header><!-- .entry-header -->
+							$masterclass_query = new WP_Query( $masterclasses_args );
 
-						<?php get_template_part( '/template-parts/bp-user-menu' ); ?>
-						<?php get_template_part( '/template-parts/shop-menu' ); ?>
-
-						<div class="container">
-							<div class="pagesection50">
-								<div class="archivecontainer">
-
-									<?php if ( have_posts() ) : while( have_posts() ) : the_post(); ?>
-											<article class="archiveitem" id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-												<div class="archiveitemimage">
-													<?php if ( has_post_thumbnail() ) : ?>
-														<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('archive-thumb'); ?></a>
-													<?php endif; ?>
-												</div>
-												<div class="archiveitemcontent">
-													<img src="/wp-content/themes/beingboss2018/img/BB_Icon_Paper.png">
-													<h5><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><span class="archiveitemtitle"> <?php the_title(); ?></span></a></h5>
-													<a href="<?php the_permalink(); ?>" class="archiveitemreadmore">SEE MORE >></a>
-												</div> 
-											</article>
-
-									<?php endwhile; endif; ?>
-
-								</div>
-
-								<?php 
-								// clean up after the query and pagination
-									wp_reset_postdata(); 
+							if ( $masterclass_query->have_posts() ) { ?>
+								<?php while ($masterclass_query->have_posts()) {
+									$masterclass_query->the_post(); 
+									$masterclassid = get_the_ID();
 								?>
+									<div class="masterclassitem" id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+										<a href="<?php the_permalink(); ?>">
+											<span class="masterclass-image">
+												<?php the_post_thumbnail('archive-thumb'); ?>
+											</span>
+											<span class="masterclass-meta">
+												<span class="masterclass-title"><?php the_title(); ?></span>
+												<span class="masterclass-price">$<?php echo $product->get_regular_price(); ?></span>
+											</span> 
+										</a>
+									</div>														
+								<?php } ?>
 
-							</div>
-						</div>
+							<?php } ?>	
 
-					<?php } ?>
+					</div> <!-- masterclasscontainer -->
+					<?php wp_reset_postdata(); ?>
 
+
+					<h2 id="books" class="padtop50 padbot5">BOOKS</h2>
+					<p class="helvetica fs14">ALL FOLLOWING LINKS ARE AMAZON AFFILIATE LINKS</p>
+					<div class="bookscontainer">
+
+						<?php 
+							$books_args = array(
+								'post_type' => array( 'affiliates' ),
+								'tax_query' => array(
+									array(
+										'taxonomy' => 'affiliatecategories',
+										'field'    => 'slug',
+										'terms'    => 'book',
+									),
+								),
+								'meta_key'   => 'bbaffiliates_weight',
+								'orderby'    => 'meta_value_num',
+								'order'      => 'ASC'
+							);
+
+							$books_query = new WP_Query( $books_args );
+
+							if ( $books_query->have_posts() ) { ?>
+								<?php while ($books_query->have_posts()) {
+									$books_query->the_post(); 
+									$bookid = get_the_ID();
+									$booklink = get_post_meta( $bookid, 'bbaffiliates_link', true );
+								?>
+									<div class="bookitem" id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+										<a href="<?php echo $booklink; ?>" target="_blank">
+											<span class="book-image">
+												<?php the_post_thumbnail('archive-thumb'); ?>
+											</span>
+											<span class="book-meta">
+												<span class="book-title"><?php the_title(); ?></span>
+											</span> 
+										</a>
+									</div>														
+								<?php } ?>
+
+							<?php } ?>	
+
+					</div> <!-- bookscontainer -->
+					<?php wp_reset_postdata(); ?>
+
+
+					<h2 id="tools" class="padtop50 padbot5">TOOLS</h2>
+					<p class="helvetica fs14 upper">All following links may include affiliate links or sponsorship partners. We only endorse products we actually use and love – and when you use our links it shows your support for our podcast and free resources! Thanks!</p>
+					<div class="toolscontainer">
+
+						<?php 
+							$tools_args = array(
+								'post_type' => array( 'affiliates' ),
+								'tax_query' => array(
+									array(
+										'taxonomy' => 'affiliatecategories',
+										'field'    => 'slug',
+										'terms'    => 'tool',
+									),
+								),
+								'meta_key'   => 'bbaffiliates_weight',
+								'orderby'    => 'meta_value_num',
+								'order'      => 'ASC'
+							);
+
+							$tools_query = new WP_Query( $tools_args );
+
+							if ( $tools_query->have_posts() ) { ?>
+								<?php while ($tools_query->have_posts()) {
+									$tools_query->the_post(); 
+									$toolid = get_the_ID();
+									$toollink = get_post_meta( $toolid, 'bbaffiliates_link', true );
+								?>
+									<div class="toolitem" id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+										<a href="<?php echo $toollink; ?>" target="_blank">
+											<span class="tool-image">
+												<?php the_post_thumbnail('archive-thumb'); ?>
+											</span>
+											<span class="tool-meta">
+												<span class="tool-title"><?php the_title(); ?></span>
+											</span> 
+										</a>
+									</div>														
+								<?php } ?>
+
+							<?php } ?>	
+
+					</div> <!-- toolscontainer -->
+					<?php wp_reset_postdata(); ?>
+
+				</div><!-- pagesection -->
 
 			</main><!-- #main -->
 
-		</div><!-- #primary -->
+			</div>
 
+		</div><!-- #primary -->
 
 	</div> <!-- .row -->
 
-</div><!-- Container end -->
-
 </div><!-- Wrapper end -->
 
-<?php 
-	if ( !is_user_logged_in() ) { 
-		get_footer(); 
-	}
-	else {
-		get_footer( 'dashboard' );
-	}
-?>
+<?php get_footer(); ?>

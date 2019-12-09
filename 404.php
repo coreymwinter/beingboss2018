@@ -26,7 +26,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 						<div class="page-content">
 
-							<div class="ontainer pagesection80">
+							<div class="container pagesection80">
 								<div class="center">
 									<div class="error-number"><img src="http://beingboss.club/wp-content/uploads/2016/03/404oops.png"></div>
 									<p class="xxmedium">Well that's sure awkward. Please excuse us.</p>

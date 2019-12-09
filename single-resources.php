@@ -37,7 +37,7 @@ get_header();
 						<div class="container">
 
 							<div class="entry-intro">
-										<div class="resource_description"><?php the_content(); ?></div>
+								<div class="resource_description"><?php the_content(); ?></div>
 							</div>
 
 						</div>
@@ -45,126 +45,135 @@ get_header();
 						<div class="container">
 
 							<div class="entry-content">
-								
-								<?php
-										$related_args = array(
-											'post_type' => 'post',
-											'posts_per_page' => 50,
-											'tax_query' => array(
-													array(
-														'taxonomy' => 'related-resources',
-														'field'    => 'slug',
-														'terms'    => $post_slug,
-													),
-												),
-											'order' => 'ASC',
-											'orderby' => 'title'
-									);
-													
-									$related_query = new WP_Query( $related_args );
 
-									if ( $related_query->have_posts() ) { ?>
 								<a class="carousel_link first_back_link" href="/resources" style="float: none;  margin-bottom: 30px;"><< BACK TO RESOURCES</a>
-								<div class="row">
-									<div class="col-md-8">
-										<h2 class="xxmedium">PODCAST EPISODES + MINISODES:</h2>
-										<div class="resourcesection">
-											<?php while ( $related_query->have_posts() ) {
-												$related_query->the_post(); ?>
 
-											<div class="resourcelink"><div class="itemleft"><img src="/wp-content/themes/beingboss2018/img/BB_Icon_Mic.png"></div><div class="itemright"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div></div>
-											<?php } ?>
-										</div>
-										<?php /* Restore original Post Data */ wp_reset_postdata(); ?> 
-												
-									</div>
-									<div class="col-md-1"></div>
-									<div class="col-md-3 resource-quote">
+								<div class="row">
+									<div class="col-md-7">
+										<?php
+											$related_args = array(
+												'post_type' => 'post',
+												'posts_per_page' => 50,
+												'tax_query' => array(
+														array(
+															'taxonomy' => 'related-resources',
+															'field'    => 'slug',
+															'terms'    => $post_slug,
+														),
+													),
+												'order' => 'ASC',
+												'orderby' => 'title'
+											);
+															
+											$related_query = new WP_Query( $related_args );
+
+											if ( $related_query->have_posts() ) { ?>
+											<div class="pagesection">
+												<h2 class="xxmedium">PODCAST EPISODES + MINISODES:</h2>
+												<div class="resourcesection">
+													<?php while ( $related_query->have_posts() ) {
+														$related_query->the_post(); ?>
+
+														<div class="resourcelink">
+															<div class="itemleft"><img src="/wp-content/themes/beingboss2018/img/BB_Icon_Mic.png"></div>
+															<div class="itemright"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div>
+														</div>
+													<?php } ?>
+												</div>
+											</div>
+										<?php
+											wp_reset_postdata();
+											} else {
+												// no posts found
+											}
+										?>
+									
+										<?php
+											$related_args_2 = array(
+												'post_type' => 'articles',
+												'posts_per_page' => 50,
+												'tax_query' => array(
+														array(
+															'taxonomy' => 'related-resources-articles',
+															'field'    => 'slug',
+															'terms'    => $post_slug,
+														),
+													),
+												'order' => 'ASC',
+												'orderby' => 'title'
+											);
+											
+											$related_query_2 = new WP_Query( $related_args_2 );
+
+											if ( $related_query_2->have_posts() ) { ?>
+											<div class="pagesection padtop80">
+												<h2 class="xxmedium">ARTICLES</h2>
+												<div class="resourcesection">
+													<?php while ( $related_query_2->have_posts() ) {
+														$related_query_2->the_post(); ?>
+													
+														<div class="resourcelink">
+															<div class="itemleft"><img src="/wp-content/themes/beingboss2018/img/BB_Icon_Paper.png"></div>
+															<div class="itemright"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div>
+														</div>
+													<?php } ?>
+												</div>
+											</div>
+										<?php
+											wp_reset_postdata();
+											} else {
+												// no posts found
+											}
+										?>
+								
+										<?php
+											$related_args_3 = array(
+												'post_type' => 'webinar',
+												'posts_per_page' => 50,
+												'tax_query' => array(
+														array(
+															'taxonomy' => 'related-resources-webinar',
+															'field'    => 'slug',
+															'terms'    => $post_slug,
+														),
+													),
+												'order' => 'ASC',
+												'orderby' => 'title'
+											);
+											
+											$related_query_3 = new WP_Query( $related_args_3 );
+
+											if ( $related_query_3->have_posts() ) { ?>
+											<div class="pagesection padtop50">
+												<h2  class="xxmedium" style="padding-top: 50px;">WEBINAR REPLAYS</h2>
+												<div class="resourcesection">
+													<?php while ( $related_query_3->have_posts() ) {
+														$related_query_3->the_post(); ?>
+
+														<div class="resourcelink">
+															<div class="itemleft"><img src="/wp-content/themes/beingboss2018/img/Icon_Video.png"></div>
+															<div class="itemright"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div>
+														</div>
+													<?php } ?>
+												</div>
+											</div>
+										<?php
+											wp_reset_postdata();
+											} else {
+												// no posts found
+											}
+										?>
+
+										<a class="carousel_link" href="/resources" style="float: none; margin-top: 80px;"><< BACK TO RESOURCES</a>
+
+									</div><!-- .col-md-7 -->
+
+									<div class="col-md-4 offset-md-1 resource-quote">
 										<?php if ( !empty( $resource_quote ) ) { ?>
 											<p class="brandon large italic">"<?php echo $resource_quote; ?>"</p>
 											<p class="brandon mediumsmall right">-<?php echo $resource_quote_author; ?></p>
-										<? } ?>
-									</div>
-										
-								</div>	
-								
-								<?php } else {
-										// no posts found
-													}
-								?>
-								
-								<div class="row pagesection80">
-									<div class="col-md-7">
-												<?php
-													$related_args_2 = array(
-															'post_type' => 'articles',
-															'posts_per_page' => 50,
-															'tax_query' => array(
-																	array(
-																		'taxonomy' => 'related-resources-articles',
-																		'field'    => 'slug',
-																		'terms'    => $post_slug,
-																	),
-																),
-															'order' => 'ASC',
-															'orderby' => 'title'
-													);
-													
-													$related_query_2 = new WP_Query( $related_args_2 );
+										<?php } ?>
 
-													if ( $related_query_2->have_posts() ) {
-														echo '<h2 class="xxmedium">ARTICLES</h2><div class="resourcesection">';
-														while ( $related_query_2->have_posts() ) {
-															$related_query_2->the_post();
-												?>
-														<div class="resourcelink"><div class="itemleft"><img src="/wp-content/themes/beingboss2018/img/BB_Icon_Paper.png"></div><div class="itemright"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div></div>
-												<?php
-														}
-														echo '</div>';
-														/* Restore original Post Data */
-														wp_reset_postdata();
-													} else {
-														// no posts found
-													}
-												?>
-										
-												<?php
-													$related_args_3 = array(
-															'post_type' => 'webinar',
-															'posts_per_page' => 50,
-															'tax_query' => array(
-																	array(
-																		'taxonomy' => 'related-resources-webinar',
-																		'field'    => 'slug',
-																		'terms'    => $post_slug,
-																	),
-																),
-															'order' => 'ASC',
-															'orderby' => 'title'
-													);
-													
-													$related_query_3 = new WP_Query( $related_args_3 );
-
-													if ( $related_query_3->have_posts() ) {
-														echo '<h2  class="xxmedium" style="padding-top: 50px;">WEBINAR REPLAYS</h2><div class="resourcesection">';
-														while ( $related_query_3->have_posts() ) {
-															$related_query_3->the_post();
-												?>
-														<div class="resourcelink"><div class="itemleft"><img src="/wp-content/themes/beingboss2018/img/Icon_Video.png"></div><div class="itemright"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></div></div>
-												<?php
-														}
-														echo '</div>';
-														/* Restore original Post Data */
-														wp_reset_postdata();
-													} else {
-														// no posts found
-													}
-												?>
-
-										<a class="carousel_link" href="/resources" style="float: none; margin-top: 80px;"><< BACK TO RESOURCES</a>
-									</div>
-									<div class="col-md-1"></div>
-									<div class="col-md-4">
 										<?php if ( !empty( $resource_optin ) ) { ?>
 											<?php if ( has_term('sidebar-custom', 'displaystyle', $resource_optin )) { ?>
 												<?php $custom_bg_image = get_the_post_thumbnail_url($resource_optin,'full'); ?>
@@ -184,16 +193,13 @@ get_header();
 												</div>
 											<?php } ?>
 										<?php } ?>
-									</div>
-								</div>
+									</div><!-- .col-md-4 -->
+
+								</div><!-- .row -->
 								
 							</div><!-- .entry-content -->
 
 						</div>
-						
-						<footer class="entry-footer">
-							
-						</footer><!-- .entry-footer -->
 
 					</article><!-- #post-## -->
 

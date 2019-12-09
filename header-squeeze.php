@@ -19,14 +19,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link href="/wp-content/themes/beingboss2018/drawer/sandbox.css" rel="stylesheet">
+	<link href="/wp-content/themes/beingboss2018/drawer/drawer.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 	<script src="https://use.typekit.net/owk8dwn.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<?php wp_head(); ?>
-	<link href="/wp-content/themes/beingboss2018/drawer/sandbox.css" rel="stylesheet">
-	<link href="/wp-content/themes/beingboss2018/drawer/drawer.min.css" rel="stylesheet">
 
-
-	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 		<script>
 		window.addEventListener("load", function(){
@@ -48,6 +47,19 @@ $container = get_theme_mod( 'understrap_container_type' );
 		  }
 		})});
 		</script>
+
+
+	<!-- Hotjar Tracking Code for www.beingboss.club -->
+	<script>
+	    (function(h,o,t,j,a,r){
+	        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	        h._hjSettings={hjid:563397,hjsv:6};
+	        a=o.getElementsByTagName('head')[0];
+	        r=o.createElement('script');r.async=1;
+	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	        a.appendChild(r);
+	    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
 </head>
 
 <body <?php body_class(); ?>>

@@ -28,26 +28,49 @@ get_header( 'squeeze' );
 
 						<header class="entry-header">
 
-							<figure class="bbpage-header" style="background-image: url('<?php echo $webinar_header_image; ?>');">
-								<div class="container">
-									<div class="headertext">
-										<?php echo $webinar_header_text; ?>
-										<h1 class="webinar-title"><?php echo $webinar_main_title; ?></h1>
-									</div>
-									<div class="headerguests">
-										<div class="guest">
-											<img class="guest-image" src="<?php echo $webinar_guest_one_image; ?>">
-											<p><?php echo $webinar_guest_one_name; ?></p>
+							<?php if($webinar_header_image) { ?>
+								<figure class="bbpage-header" style="background-image: url('<?php echo $webinar_header_image; ?>');">
+							<?php } else { ?>
+								<figure class="bbpage-header" style="background-image: url('/wp-content/uploads/2018/01/Clubhouse_Back1.jpg');">
+							<?php } ?>
+									<div class="container">
+										<div class="row align-items-center row-eq-height">
+											<?php if($webinar_guest_two_name) { ?>
+												<div class="col-md-6 headertext">
+													<?php echo $webinar_header_text; ?>
+													<h1 class="webinar-title"><?php echo $webinar_main_title; ?></h1>
+												</div>
+												<div class="col-md-6 headerguests">
+													<div class="row align-items-center row-eq-height">
+														<div class="col-md-6 guest">
+															<img class="guest-image" src="<?php echo $webinar_guest_one_image; ?>">
+															<p><?php echo $webinar_guest_one_name; ?></p>
+														</div>
+
+														<div class="col-md-6 guest">
+															<img class="guest-image" src="<?php echo $webinar_guest_two_image; ?>">
+															<p><?php echo $webinar_guest_two_name; ?></p>
+														</div>
+													</div>
+												</div>
+											<?php } else { ?>
+												<div class="col-md-9 headertext">
+													<?php echo $webinar_header_text; ?>
+													<h1 class="webinar-title"><?php echo $webinar_main_title; ?></h1>
+												</div>
+												<div class="col-md-3 headerguests">
+													<div class="guest">
+														<img class="guest-image" src="<?php echo $webinar_guest_one_image; ?>">
+														<p><?php echo $webinar_guest_one_name; ?></p>
+													</div>
+												</div>
+											<?php } ?>
 										</div>
-										<div class="guest">
-											<img class="guest-image" src="<?php echo $webinar_guest_two_image; ?>">
-											<p><?php echo $webinar_guest_two_name; ?></p>
-										</div>
 									</div>
-								</div>
-							</figure>
+								</figure>
 
 						</header><!-- .entry-header -->
+
 						
 						<?php if ( get_post_meta( $postid, 'bbwebinar_replay_mode', 1 ) ) :
 							get_template_part( '/template-parts/webinar-replay' );

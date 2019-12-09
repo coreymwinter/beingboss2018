@@ -68,8 +68,6 @@
 							<?php } else { ?>
 								<p class="button center" style="opacity: 0.5;">PRIVATE MESSAGE</p>
 							<?php } ?>
-
-							<!-- <?php hibuddy_send_private_message_button(); ?> -->
 		
 
 						</div>

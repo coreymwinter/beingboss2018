@@ -36,21 +36,9 @@ $postid = get_the_ID();
 											</div>
 										</div>
 									</div>
-								<?php } else { ?>
-									<div class="imagebackground" style="background-image: url('/wp-content/uploads/2018/08/Back_Laptop_2.jpg');">
-										<div class="container" style="padding: 100px 0;">
-											<div style="width: 90%; max-width: 400px; margin: 0 auto; display: table;">
-												<div class="whitesection" style="padding: 50px 0;">
-													<h2 class="center">REGISTER</h2>
-													<div style="width: 75%; margin: 0 auto; display: table;"><?php the_content(); ?></div>
-													<div class="padtop30">
-														<a href="https://beingboss.club/login" class="button-pink">Already a member?</a>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								<?php } ?>
+								<?php } else { 
+									get_template_part( '/template-parts/register-block' );
+								} ?>
 
 							</div><!-- .entry-content -->
 

@@ -36,13 +36,15 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 
 							<header class="entry-header">
 
-								<figure class="bbpage-header" style="background-image: url('<?php echo $header_image; ?>');">
+								<div class="pagesection bbpage-header" style="background-image: url('<?php echo $header_image; ?>');">
 									<div class="container">
-										<div class="headertext">
-											<?php echo $header_text; ?>
+										<div class="row align-items-center">
+											<div class="col-md-12 headertext">
+												<?php echo $header_text; ?>
+											</div>
 										</div>
 									</div>
-								</figure>
+								</div>
 
 							</header><!-- .entry-header -->
 

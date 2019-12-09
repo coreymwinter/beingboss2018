@@ -22,6 +22,12 @@ get_header();
 
 			<main class="site-main" id="main">
 
+				<?php 
+				if ( !is_user_logged_in() ) {
+					 get_template_part( '/template-parts/register-block' );
+				} else 
+				{ ?>	
+
 				<header class="entry-header">
 
 						<figure class="bbpage-header" style="background-image: url('/wp-content/themes/beingboss2018/img/Back_Laptop_5.jpg');">
@@ -68,6 +74,8 @@ get_header();
 						</div> <!-- row -->
 					</div> <!-- pagesection50 -->
 				</div><!-- container -->
+
+				<?php } ?>
 
 			</main><!-- #main -->
 

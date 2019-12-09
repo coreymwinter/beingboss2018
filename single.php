@@ -26,67 +26,59 @@ get_header();
 							<?php $shownote_resources = get_post_meta( $postid, 'bbshownotes_resources', true ); ?>
 							<?php $fullwidth_optin = get_post_meta( get_the_ID(), 'bbshownotes_optin_select', true ); ?>
 							<?php $comment_prompt = get_post_meta( $postid, 'bbshownotes_comment_prompt', true ); ?>
-
-						<header class="entry-header">
-
-							<div class="container">
-
-								<?php the_title( '<h1 class="shownote-title">', '</h1>' ); ?>
-
-								<div class="shownote entry-meta">
-
-									<?php if ( in_category('10minutes') ) {
-											//do nothing
-										} else {
-											echo get_the_date(); 
-										} 
-									?>
-
-								</div><!-- .entry-meta -->
-
-							</div>
-
-						</header><!-- .entry-header -->
 						
-						<div class="container">
-
-							<div class="entry-intro">
-								<div class="row">
-									<div class="col-md-4">
-										<?php echo $shownote_soundcloud; ?>
-									</div>
-									<div class="col-md-8 shownote_intro">
-										<?php if ( !empty( $shownote_quote ) ) { ?>
-											<div class="shownote_quote">"<?php echo $shownote_quote; ?>"</div>
-											<div class="shownote_quoteauthor">- <?php echo $shownote_quoteauthor; ?></div>
-											<div class="shownote_quote_tweet">
-												<?php if ( !empty( $shownote_quoteauthortwitter ) ) { ?>
-														<a href="http://twitter.com/home?status=&quot;<?php echo $shownote_quote; ?>&quot; - @<?php echo $shownote_quoteauthortwitter; ?> via <?php echo get_permalink(); ?>" target="_blank"><img src="/wp-content/themes/beingboss2018/img/Twitter-icon.png"></a>
-												<?php	}
-													else { ?>
-														<a href="http://twitter.com/home?status=&quot;<?php echo $shownote_quote; ?>&quot; - <?php echo $shownote_quoteauthor; ?> via <?php echo get_permalink(); ?>" target="_blank"><img src="/wp-content/themes/beingboss2018/img/Twitter-icon.png"></a>
-												<?php	}
+						<div class="graysection">
+							<div class="container">
+								<div class="entry-intro">
+									<div class="row row-eq-height align-items-center pagesection30">
+										<div class="col-md-8 shownote_intro">
+											<span class="shownote_date">
+												<?php if ( in_category('10minutes') ) {} 
+													else { echo get_the_date(); } 
 												?>
-											</div>
-										<?php } ?>
-										<div class="shownote_description"><?php the_content(); ?></div>
+											</span>
+											<?php the_title( '<h1 class="shownote-title">', '</h1>' ); ?>
+											<div class="shownote_description"><?php the_content(); ?></div>
+										</div>
+										<div class="col-md-4">
+											<?php echo $shownote_soundcloud; ?>
+										</div>
 									</div>
 								</div>
 							</div>
-
 						</div>
 
 						<?php if ( !empty( $fullwidth_optin ) ) { ?>
 							<div class="optinwrapper">
 								<div class="container">
-									<img class="center" src="/wp-content/themes/beingboss2018/img/Optin_Icon_White.png">
-									<h2 class="center white">FREE RESOURCE: <?php echo get_the_title($fullwidth_optin); ?></h2>
-									<?php echo apply_filters('the_content', get_post_field('post_content', $fullwidth_optin)); ?>
+									<div class="row row-eq-height align-items-center">
+										<div class="col-lg-6">
+											<img class="center" src="/wp-content/themes/beingboss2018/img/Optin_Icon_White.png">
+											<h3 class="center white padbot0 large">FREE RESOURCE:<br /><?php echo get_the_title($fullwidth_optin); ?></h3>
+											<?php echo apply_filters('the_content', get_post_field('post_content', $fullwidth_optin)); ?>
+										</div>
+										<div class="col-lg-6">
+											<h3 class="center white padbot0 large">ACCESS <u>ALL</u> OF OUR RESOURCES</h3>
+											<p class="center white italic xxmedium">Free access to exclusive member-only<br />content - including worksheets,<br /> webinar replays, and more!</p>
+											<a href="/materials" class="button-yellow">ACCESS NOW</a>
+										</div>
+									</div>
 								</div>
 							</div>
 						<?php } ?>
 
+						<?php get_template_part( '/template-parts/optinbar' ); ?>
+
 						<div class="container">
+
+							<?php if ( !empty( $shownote_quote ) ) { ?>
+								<div class="row padtop80 padbot50">
+									<div class="col-md-8 offset-md-2">
+										<div class="shownote_quote">"<?php echo $shownote_quote; ?>"</div>
+										<div class="shownote_quoteauthor">- <?php echo $shownote_quoteauthor; ?></div>
+									</div>
+								</div>
+							<?php } ?>
 
 							<div class="entry-content">
 								<div class="row">
@@ -127,38 +119,18 @@ get_header();
 											?>
 										<?php } ?>
 
-										<h3 class='gray'>MORE FROM KATHLEEN</h3>
-										<?php echo do_shortcode('[content_block slug=more-from-kathleen]'); ?>
-										
-										<h3 class='gray'>MORE FROM EMILY</h3>
-										<?php echo do_shortcode('[content_block slug=more-from-emily]'); ?>
-										
+										<div class="emilyandkathleen">
+											<h3 class="gray">MORE FROM KATHLEEN</h3>
+											<?php echo do_shortcode('[content_block slug=more-from-kathleen]'); ?>
+											
+											<h3 class="gray">MORE FROM EMILY</h3>
+											<?php echo do_shortcode('[content_block slug=more-from-emily]'); ?>
+										</div>
 										<?php $shownote_pinterest = get_post_meta( $postid, 'bbshownotes_pinitimages', true ); ?>
 										<?php if ( !empty( $shownote_pinterest ) ) { ?>
 											<h3 class="gray">PIN IT:</h3>
 											<div class="shownote_pinit"><?php cmb2_bbshownotes_pinterest_images( 'bbshownotes_pinitimages', 'large' ); ?></div>
 										<?php } ?>
-
-										<?php if ( !empty( $comment_prompt ) ) { ?>
-											<div>
-												<h3 class="gray">PROMPT:</h3>
-												<p class="comment-prompt"><?php echo $comment_prompt; ?></p>
-											</div>
-										<?php } ?>
-
-										<?php if ( !empty( $comment_prompt ) ) { ?>
-										<div class="padbot50">
-										<?php } ?>
-										<?php if ( empty( $comment_prompt ) ) { ?>
-										<div class="pagesection50">
-										<?php } ?>
-											<?php
-												// If comments are open or we have at least one comment, load up the comment template.
-												if ( comments_open() || get_comments_number() ) :
-													comments_template();
-												endif;
-											?>
-										</div>
 										
 									</div>
 									<div class="col-md-4">
@@ -182,14 +154,12 @@ get_header();
 														while ( $sponsor_query->have_posts() ) {
 															$sponsor_query->the_post();
 												?>
-																	<a href="<?php echo get_post_meta( $post->ID, 'bbsponsors_link', true ); ?>" target="_blank" rel="nofollow noopener noreferrer"><?php echo get_the_post_thumbnail( $post->ID ); ?></a>
+																	<a href="<?php echo get_post_meta( $post->ID, 'bbsponsors_link', true ); ?>" target="_blank" rel="nofollow noopener noreferrer" class="<?php echo get_post_meta( $post->ID, 'bbsponsors_event', true ); ?>" onClick="ga('send', 'event', 'sponsor', 'Click', '<?php echo get_post_meta( $post->ID, 'bbsponsors_event', true ); ?>', '0');"><?php echo get_the_post_thumbnail( $post->ID ); ?></a>
 												<?php		}
 													} }
 											?>
 										</div>
-										<div class="shownote_subscribe">
-											<?php echo do_shortcode('[content_block id=9667 slug=shownote-sidebar-subscribe]'); ?>
-										</div>
+
 										<div class="shownote_ceoday">
 											<a href="https://courses.beingboss.club/" target="_blank"><img src="/wp-content/themes/beingboss2018/img/CEODAYKITAd300x500_New.png"></a>
 										</div>

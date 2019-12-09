@@ -19,14 +19,15 @@ if ( $query->have_posts() )
 		while ($query->have_posts())
 		{
 			$query->the_post();
+				$popup_class = get_post_meta( get_the_ID(), 'bbevents_vacation_video_class', true );
 				$thrive_shortcode_id = get_post_meta( get_the_ID(), 'bbevents_vacation_video', true );
 				$vacation_page = get_post_meta (get_the_ID(), 'bbevents_event_link', true );
 			?>
 			<?php if ( !empty( $vacation_page ) ) { ?>
 				<a href="<?php echo do_shortcode($vacation_page); ?>">
 			<?php } ?>
-			<?php if ( !empty( $thrive_shortcode_id ) ) { ?>
-				<span class="tve-leads-two-step-trigger tl-2step-trigger-<?php echo do_shortcode($thrive_shortcode_id); ?>">			
+			<?php if ( $popup_class ) { ?>
+				<span class="popmake-<?php echo $popup_class; ?>">			
 			<?php } ?>
 					<article class="vacationitem" id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 						<?php if ( has_post_thumbnail() ) : ?>
@@ -47,7 +48,7 @@ if ( $query->have_posts() )
 			<?php if ( !empty( $vacation_page ) ) { ?>
 				</a>				
 			<?php } ?>
-			<?php if ( !empty( $thrive_shortcode_id ) ) { ?>
+			<?php if ( $popup_class ) { ?>
 				</span>					
 			<?php } ?>
 			<?php

@@ -29,9 +29,6 @@
 	<div class="container pagesection80">
 		<div class="row">			
 			<div class="col-md-6 offset-md-3">
-				<h2 class="center upper h1 padbot30">
-					<?php echo $webinar_main_title; ?>
-				</h2>
 				<?php the_content(); ?>
 			</div>		
 		</div>

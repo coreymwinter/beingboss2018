@@ -20,7 +20,7 @@ get_header();
 
 						<header class="entry-header">
 						
-							<div class="container">
+							<div class="container padtop30">
 
 								<?php the_title( '<h1 class="article-title">', '</h1>' ); ?>
 
@@ -61,10 +61,10 @@ get_header();
 										<div class="author-box">
 											<?php $author_custom_image = get_the_author_meta('bb_customavatar'); ?>
 											<?php if ( !empty( $author_custom_image ) ) { ?>
-												<div class="leftside" style="background-image: url('<?php echo $author_custom_image; ?>');"></div>
+												<div class="leftside one" style="background-image: url('<?php echo $author_custom_image; ?>');"></div>
 											<?php }
 												else { ?>
-												<div class="leftside" style="background-image: url('<?php echo get_avatar_url( get_the_author_meta( 'ID' ), array('size' => 250) ); ?>');"></div>
+												<div class="leftside two" style="background-image: url('<?php echo get_avatar_url( get_the_author_meta( 'ID' ), array('size' => 400) ); ?>');"></div>
 											<?php } ?>
 											<div class="rightside">
 												<div class="capsule pagesection30">

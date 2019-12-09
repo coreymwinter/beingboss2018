@@ -22,7 +22,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<div class="col-md-5 footer-subscribe-left">
 
-					<img src="/wp-content/themes/beingboss2018/img/Footer_HeadphonesBoss2.png">
+					<img src="/wp-content/themes/beingboss2018/img/Footer_HeadphonesBoss2_Optimized.png">
 
 				</div><!--col end -->
 				<div class="col-md-7 footer-subscribe-right">
@@ -37,6 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						    <div>
 						        <input type="email" id="drip-email" name="fields[email]" value="" placeholder="email address" />
 						    </div>
+						    <div style="display: none;" aria-hidden="true"><label for="website">Website</label><br /><input type="text" id="website" name="website" tabindex="-1" autocomplete="false" value="" /></div>
 						  <div>
 						    <input type="submit" class="button" value="SUBMIT" data-drip-attribute="sign-up-button" />
 						  </div>
@@ -128,11 +129,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
 <script src="/wp-content/themes/beingboss2018/drawer/drawer.min.js" charset="utf-8"></script>
-<script>
-    jQuery(document).ready(function() {
-        jQuery('.drawer').drawer();
-    });
-</script>
+
 <!-- Drip -->
 <script type="text/javascript">
   var _dcq = _dcq || [];

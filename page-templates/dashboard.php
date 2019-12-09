@@ -39,7 +39,14 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 								$user = wp_get_current_user();
 								$user_ID = $user->ID;	
 								$user_name = $user->user_login;	
-							?>				
+							?>	
+
+
+							<?php 
+							if ( !is_user_logged_in() ) {
+								 get_template_part( '/template-parts/register-block' );
+							} else 
+							{ ?>			
 
 							<header class="entry-header">
 
@@ -58,13 +65,7 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 								<?php get_template_part( '/template-parts/bp-user-menu' ); ?>
 
 
-								<?php 
-								if ( !is_user_logged_in() ) { ?>
-									<div class="container pagesection80">
-										<?php get_template_part( '/template-parts/loggedout-noaccess' ); ?>
-									</div>
-								<?php }
-								else { ?>
+								
 
 									<?php the_content(); ?>
 
@@ -98,7 +99,7 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 											?>
 										</div>
 									</div>
-								<?php } ?>
+								
 
 							</div><!-- .entry-content -->
 
@@ -106,6 +107,7 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 
 
 							</footer><!-- .entry-footer -->
+						<?php } ?>
 
 						</article><!-- #post-## -->
 

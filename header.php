@@ -16,15 +16,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+	<meta name="apple-itunes-app" content="app-id=956310359">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
 	<!-- - - - - - - - - - BEING BOSS Code - - - - - - - - - - - - -->
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-	<script src="https://use.typekit.net/owk8dwn.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link href="/wp-content/themes/beingboss2018/drawer/sandbox.css" rel="stylesheet">
 	<link href="/wp-content/themes/beingboss2018/drawer/drawer.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+	<script src="https://use.typekit.net/owk8dwn.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	
 	
 	<!-- Facebook Pixel Code -->
 		<script>
@@ -46,8 +49,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</noscript>
 	<!-- End Facebook Pixel Code -->
 
-
-	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+	<!-- Hotjar Tracking Code for www.beingboss.club -->
+	<script>
+	    (function(h,o,t,j,a,r){
+	        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	        h._hjSettings={hjid:563397,hjsv:6};
+	        a=o.getElementsByTagName('head')[0];
+	        r=o.createElement('script');r.async=1;
+	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	        a.appendChild(r);
+	    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+		
 		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
 		<script>
 		window.addEventListener("load", function(){
@@ -123,30 +136,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_custom_logo();
 					} ?><!-- end custom logo -->
 
-				<button type="button" class="drawer-toggle drawer-hamburger">
-                			<span class="sr-only">toggle navigation</span>
-                			<span class="drawer-hamburger-icon"></span>
-				</button>
-				<nav class="drawer-nav" role="navigation">
-					<?php wp_nav_menu(
-						array(
-							'menu'  => '2018 Mobile Menu',
-							'menu_class'      => 'navbar-nav-mobile',
-							'fallback_cb'     => '',
-							'menu_id'         => 'main-menu-mobile',
-						)
-					); ?>
+				
 
-					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>" id="mobile-search">
-							<input name="s" type="search" placeholder="Search">
-					</form>
-				</nav>
+
 				<!-- The WordPress Menu goes here -->
 				<div class="menuright">
 					<div class="topmenu">
 						<a href="/about">ABOUT</a>
 						<a href="/press">PRESS</a>
-						<a href="/dashboard">DASHBOARD</a>
+						<a href="/dashboard">ACCOUNT</a>
 						<?php if ( !is_user_logged_in() ) { ?>
 							<a href="/login">LOGIN</a>
 						<?php } else { ?>

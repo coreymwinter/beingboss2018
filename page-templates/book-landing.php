@@ -36,16 +36,18 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 
 							<header class="entry-header">
 
-								<figure class="bbpage-header book-landing" style="background-image: url('<?php echo $header_image; ?>');">
+								<div class="pagesection bbpage-header book-landing" style="background-image: url('<?php echo $header_image; ?>');">
 									<div class="container">
-										<div class="headertext">
-											<div class="flag">
-												<span class="italic">the Being Boss book</span><br /><span class="brandon">ORDER YOURS TODAY!</span>
+										<div class="row align-items-center">
+											<div class="col-lg-4 offset-lg-8 col-md-6 offset-md-3 headertext col-sm-8 offset-sm-2">
+												<div class="flag">
+													<span class="italic">the Being Boss book</span><br /><span class="brandon">ORDER YOURS TODAY!</span>
+												</div>
+												<img class="bookimage" src="https://beingboss.club/wp-content/themes/beingboss2018/img/BeingBossBookMockup_Paperback_Home.png" alt="" />
 											</div>
-											<img class="bookimage" src="https://beingboss.club/wp-content/themes/beingboss2018/img/BeingBossBookMockup_Paperback_Home.png" alt="" />
 										</div>
 									</div>
-								</figure>
+								</div>
 
 							</header><!-- .entry-header -->
 
