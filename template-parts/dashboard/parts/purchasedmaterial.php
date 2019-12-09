@@ -45,5 +45,5 @@
 
 	<?php wp_reset_postdata(); ?>
 
-	<a href="/courses" class="carousel_link">VIEW ALL MATERIAL >></a>
+	<a href="/materials" class="carousel_link">VIEW ALL MATERIAL >></a>
 </div>

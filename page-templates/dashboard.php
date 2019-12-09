@@ -61,8 +61,7 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 								<?php 
 								if ( !is_user_logged_in() ) { ?>
 									<div class="container pagesection80">
-										<p class="center brandon large">This page is only available to registered bosses.</p>
-										<a href="/login" class="button-yellow center">LOG IN</a>
+										<?php get_template_part( '/template-parts/loggedout-noaccess' ); ?>
 									</div>
 								<?php }
 								else { ?>

@@ -2,7 +2,7 @@
 	<div class="col-md-4">
 		<?php get_template_part( '/template-parts/dashboard/parts/notices' ); ?>
 
-		<?php get_template_part( '/template-parts/dashboard/parts/myprogress' ); ?>
+		
 
 		<?php get_template_part( '/template-parts/dashboard/parts/ceodayad' ); ?>
 	</div>

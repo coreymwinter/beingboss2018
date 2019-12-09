@@ -20,7 +20,6 @@
 							<div class="menu-user-menu-container">
 								<ul id="menu-user-menu" class="user-menu">
 									<li><a href="/members/<?php echo $current_user_name; ?>/front/">Profile</a></li>
-									<li><a href="/members/<?php echo $current_user_name; ?>/messages/">Messages</a></li>
 									<li><a href="/members/<?php echo $current_user_name; ?>/shop/cart/">Cart</a></li>
 									<li><a href="/members/<?php echo $current_user_name; ?>/settings/">Settings</a></li>
 									<li><a href="<?php echo wp_logout_url(); ?>">Log Out</a></li>
@@ -42,11 +41,11 @@
 		</div>
 	</div>
 </div>
-
-<div class="user-menu-bar mobileshow">
-	<div class="container">
+<div class="mobileshow">
+	<div class="user-menu-bar">
+		<div class="container">
 			<div class="row">
-				<div class="col-md-6 mobiledashnav">
+				<div class="col-lg-6 mobiledashnav">
     				<input type="checkbox" id="show-menu" role="button">
     				<label for="show-menu" class="show-menu"><i class="fa fa-bars" aria-hidden="true"></i> Dashboard Menu</label>
 					<?php wp_nav_menu(
@@ -59,5 +58,6 @@
 					); ?>
 				</div>
 			</div>
+		</div>
 	</div>
 </div>

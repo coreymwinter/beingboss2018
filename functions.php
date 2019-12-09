@@ -163,6 +163,31 @@ add_filter( 'body_class', function( $classes ) {
 
 
 
+function um_filter_dynamic_post_args( $post_args , $menu_item_id ){
+ 
+    //Target menu item 562
+    if( $menu_item_id == 12942 ){
+ 
+        //Change orderby to random
+        $post_args['orderby'] = 'rand';
+    }
+ 
+    return $post_args;
+ 
+}
+add_filter( 'ubermenu_dynamic_posts_args' , 'um_filter_dynamic_post_args' , 10 , 2 );
+
+
+function my_uber_add_subcontent( $content , $post , $item_id ){
+ 
+   $content.= '<span class="ubermenu-target-description ubermenu-target-text">';
+   $content.= $post->post_excerpt;
+   $content.= '</span>';
+ 
+   return $content;
+}
+add_filter( 'ubermenu_dp_subcontent' , 'my_uber_add_subcontent' , 10 , 3 );
+
 
 
 

@@ -41,7 +41,7 @@ get_header();
 								<figure class="bbpage-header" style="background-image: url('/wp-content/themes/beingboss2018/img/Back_Laptop_5.jpg');">
 									<div class="container">
 										<div class="headertext">
-											<h1 class="center white huge">COURSES</h1>
+											<h1 class="center white huge">MATERIALS</h1>
 										</div>
 									</div>
 								</figure>

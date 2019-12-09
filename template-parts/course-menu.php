@@ -56,7 +56,7 @@
 
 					<div class="col-md-6 vertcenter breadcrumbs-menu" style="text-align: right;">
 						<span class="breadcrumb-leads">
-							<a href="/dashboard">Home</a> / <a href="/courses">Courses</a>
+							<a href="/dashboard">Home</a> / <a href="/materials">Materials</a>
 						</span>
 						<?php echo do_shortcode('[uo_breadcrumbs]'); ?>
 					</div>

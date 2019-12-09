@@ -35,7 +35,12 @@ get_header();
 
 								<div class="shownote entry-meta">
 
-									<?php echo get_the_date(); ?>
+									<?php if ( in_category('10minutes') ) {
+											//do nothing
+										} else {
+											echo get_the_date(); 
+										} 
+									?>
 
 								</div><!-- .entry-meta -->
 
