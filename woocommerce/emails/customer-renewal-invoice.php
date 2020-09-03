@@ -4,7 +4,7 @@
  *
  * @author	Brent Shepherd
  * @package WooCommerce_Subscriptions/Templates/Emails
- * @version 1.4
+ * @version 2.6.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly

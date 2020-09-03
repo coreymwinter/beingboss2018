@@ -25,6 +25,7 @@ if ( $query->have_posts() )
 			<?php $event_where = get_post_meta( get_the_ID(), 'bbevents_event_where', true ); ?>
 			<?php $event_link = get_post_meta( get_the_ID(), 'bbevents_event_link', true ); ?>
 			<?php $event_label = get_post_meta( get_the_ID(), 'bbevents_event_label', true ); ?>
+			<?php $event_details = get_post_meta( get_the_ID(), 'bbevents_event_details', true ); ?>
 			
 			<article class="eventitem" id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 				<div class="eventitemleft">
@@ -35,8 +36,10 @@ if ( $query->have_posts() )
 				</div>
 				<div class="eventitemcontent">
 					<h2 class="eventitemtitle"><a href="<?php echo $event_link; ?>" target="_blank" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-					<p><?php echo $event_time; ?><br />
-					@ <?php echo $event_where; ?></p>
+					<p class="padbot0"><?php echo $event_time; ?> @ <?php echo $event_where; ?></p>
+					<?php if ($event_details) { ?>
+						<p><?php echo $event_details; ?></p>
+					<?php } ?>
 				</div> 
 				<div class="eventitemright">
 					<a class="button-yellow" target="_blank" style="max-width: 95%;" href="<?php echo $event_link; ?>"><?php echo $event_label; ?></a>

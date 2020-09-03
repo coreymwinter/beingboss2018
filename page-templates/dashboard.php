@@ -64,9 +64,6 @@ $pagecss = get_post_meta( $postid, 'bbpage_page_css', true );
 
 								<?php get_template_part( '/template-parts/bp-user-menu' ); ?>
 
-
-								
-
 									<?php the_content(); ?>
 
 									<div class="container dashboard-content">

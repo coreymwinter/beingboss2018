@@ -4,7 +4,7 @@
  *
  * @author	Brent Shepherd
  * @package WooCommerce_Subscriptions/Templates/Emails
- * @version 1.4
+ * @version 2.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -26,5 +26,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php do_action( 'woocommerce_email_order_meta', $order, $sent_to_admin, $plain_text, $email ); ?>
 
 <?php do_action( 'woocommerce_email_customer_details', $order, $sent_to_admin, $plain_text, $email ); ?>
+
+<?php 
+/**
+ * Show user-defined additional content - this is set in each email's settings.
+ */
+if ( $additional_content ) {
+	echo wp_kses_post( wpautop( wptexturize( $additional_content ) ) );
+}
+?>
 
 <?php do_action( 'woocommerce_email_footer', $email ); ?>

@@ -6,7 +6,12 @@
  */
 
 get_header();
+global $post;
 ?>
+
+<style>
+	.episode-transcript {display: none;}
+</style>
 
 <div class="wrapper" id="shownote-wrapper">
 
@@ -26,6 +31,7 @@ get_header();
 							<?php $shownote_resources = get_post_meta( $postid, 'bbshownotes_resources', true ); ?>
 							<?php $fullwidth_optin = get_post_meta( get_the_ID(), 'bbshownotes_optin_select', true ); ?>
 							<?php $comment_prompt = get_post_meta( $postid, 'bbshownotes_comment_prompt', true ); ?>
+							<?php $transcript = get_post_meta( $postid, 'bbshownotes_transcript', true ); ?>
 						
 						<div class="graysection">
 							<div class="container">
@@ -33,9 +39,7 @@ get_header();
 									<div class="row row-eq-height align-items-center pagesection30">
 										<div class="col-md-8 shownote_intro">
 											<span class="shownote_date">
-												<?php if ( in_category('10minutes') ) {} 
-													else { echo get_the_date(); } 
-												?>
+												<?php echo get_the_date(); ?>
 											</span>
 											<?php the_title( '<h1 class="shownote-title">', '</h1>' ); ?>
 											<div class="shownote_description"><?php the_content(); ?></div>
@@ -49,19 +53,19 @@ get_header();
 						</div>
 
 						<?php if ( !empty( $fullwidth_optin ) ) { ?>
-							<div class="optinwrapper">
+							<div class="optinwrapper optin-id-<?php echo $fullwidth_optin; ?>">
 								<div class="container">
 									<div class="row row-eq-height align-items-center">
-										<div class="col-lg-6">
-											<img class="center" src="/wp-content/themes/beingboss2018/img/Optin_Icon_White.png">
-											<h3 class="center white padbot0 large">FREE RESOURCE:<br /><?php echo get_the_title($fullwidth_optin); ?></h3>
+										<div class="col">
+											<img class="center padbot5" src="/wp-content/themes/beingboss2018/img/Optin_Icon_White.png">
+											<h3 class="center white padbot15 large">FREE RESOURCE: <?php echo get_the_title($fullwidth_optin); ?></h3>
 											<?php echo apply_filters('the_content', get_post_field('post_content', $fullwidth_optin)); ?>
 										</div>
-										<div class="col-lg-6">
+<!-- 										<div class="col-lg-6">
 											<h3 class="center white padbot0 large">ACCESS <u>ALL</u> OF OUR RESOURCES</h3>
 											<p class="center white italic xxmedium">Free access to exclusive member-only<br />content - including worksheets,<br /> webinar replays, and more!</p>
 											<a href="/materials" class="button-yellow">ACCESS NOW</a>
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
@@ -120,12 +124,30 @@ get_header();
 										<?php } ?>
 
 										<div class="emilyandkathleen">
-											<h3 class="gray">MORE FROM KATHLEEN</h3>
-											<?php echo do_shortcode('[content_block slug=more-from-kathleen]'); ?>
+
+											<?php 
+												$compare_date = strtotime( "2020-08-19" );
+												$post_date = strtotime( "$post->post_date" );
+
+												if ($compare_date > $post_date) { ?>
+
+													<h3 class="gray">MORE FROM KATHLEEN</h3>
+													<?php echo do_shortcode('[content_block slug=more-from-kathleen]'); ?>
+
+											<?php } ?>
 											
 											<h3 class="gray">MORE FROM EMILY</h3>
 											<?php echo do_shortcode('[content_block slug=more-from-emily]'); ?>
 										</div>
+
+										<?php if($transcript) { ?>
+											<h2>Episode Transcript</h2>
+											<div class="button-yellow transcript-link">Show Transcript</div>
+											<div class="episode-transcript">
+												<?php echo $transcript; ?>
+											</div>
+										<?php } ?>
+
 										<?php $shownote_pinterest = get_post_meta( $postid, 'bbshownotes_pinitimages', true ); ?>
 										<?php if ( !empty( $shownote_pinterest ) ) { ?>
 											<h3 class="gray">PIN IT:</h3>
@@ -258,5 +280,14 @@ get_header();
 	</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
+
+<script>
+	jQuery(document).ready(function(){
+	    jQuery('.transcript-link').click(function(event) {
+	        jQuery('.episode-transcript').is(":visible")?jQuery(this).text("Show Transcript"):jQuery(this).text("Hide Transcript");       
+	        jQuery('.episode-transcript').toggle('show');
+	    });
+	});
+</script>
 
 <?php get_footer(); ?>

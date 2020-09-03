@@ -5,12 +5,8 @@
 ?>
 
 <div class="row">
-	<div class="col-md-4">
-		<?php get_template_part( '/template-parts/dashboard/parts/notices' ); ?>
 
-	</div>
-
-	<div class="col-md-8">
+	<div class="col-md-12">
 
 		<div class="dashboard-widget user-orders padbot30">
 			<h3>YOUR ORDERS</h3>

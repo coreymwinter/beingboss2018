@@ -191,5 +191,74 @@ add_filter( 'ubermenu_dp_subcontent' , 'my_uber_add_subcontent' , 10 , 3 );
 
 
 
+/*function replace_affiliate_register_text( $content ){
+ 
+   $content.= 'test5';
+ 
+   return $content;
+}
+apply_filter( 'yith_wcaf_registration_form_become_affiliate_text', 'replace_affiliate_register_text' );*/
+
+
+
+// Cut Jack's boasting
+add_filter( 'yith_wcaf_registration_form_become_affiliate_text' , 'replace_affiliate_register_text');
+function replace_affiliate_register_text($boast) {
+  // Append another phrase at the end of his boast
+  $boast = get_template_part( '/template-parts/affiliate-terms' );
+  return $boast;
+}
+
+
+
+
+add_action( 'gform_user_registered', 'wpc_gravity_registration_autologin',  10, 4 );
+/**
+ * Auto login after registration.
+ */
+function wpc_gravity_registration_autologin( $user_id, $user_config, $entry, $password ) {
+	$user = get_userdata( $user_id );
+	$user_login = $user->user_login;
+	$user_password = $password;
+       $user->set_role(get_option('default_role', 'subscriber'));
+
+    wp_signon( array(
+		'user_login' => $user_login,
+		'user_password' =>  $user_password,
+		'remember' => false
+
+    ) );
+}
+
+
+
+
+// This is your function, you can name it anything you want
+function affiliate_dashboard_text() { ?>
+    <?php echo get_template_part( '/template-parts/affiliate-landing' ); ?>
+<?php }
+
+// This is the action function that outputs the function above into the theme hook under the logo
+// Total version 3.5.3+ required!!
+add_action( 'yith_wcaf_before_dashboard_summary', 'affiliate_dashboard_text', 10 );
+
+
+
+
+
+
+
+add_filter( 'template_include', 'custom_single_product_template_include', 50, 1 );
+function custom_single_product_template_include( $template ) {
+    if ( is_singular('product') && (has_term( 'Membership', 'product_cat')) ) {
+        $template = get_stylesheet_directory() . '/single-product-14028.php';
+    } 
+    return $template;
+}
+
+
+
+
+
 
 ?>

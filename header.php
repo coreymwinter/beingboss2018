@@ -144,7 +144,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="topmenu">
 						<a href="/about">ABOUT</a>
 						<a href="/press">PRESS</a>
-						<a href="/dashboard">ACCOUNT</a>
+						<a href="https://community.beingboss.club/" target="_blank">COMMUNITY</a>
+						<a href="/account">ACCOUNT</a>
 						<?php if ( !is_user_logged_in() ) { ?>
 							<a href="/login">LOGIN</a>
 						<?php } else { ?>

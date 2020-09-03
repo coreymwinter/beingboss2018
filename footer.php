@@ -29,19 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="pagesection">
 						<p class="brandon large">CREATIVE + ENTREPRENEUR</p>
 						<p class="xmedium italic">Get the scoop on how to be more boss.</p>
-						<form action="https://www.getdrip.com/forms/458596298/submissions" method="post" data-drip-embedded-form="458596298" class="fullwidthform">
-						  <div data-drip-attribute="description"></div>
-						    <div>
-						        <input type="text" id="drip-Name" name="fields[Name]" value="" placeholder="name" />
-						    </div>
-						    <div>
-						        <input type="email" id="drip-email" name="fields[email]" value="" placeholder="email address" />
-						    </div>
-						    <div style="display: none;" aria-hidden="true"><label for="website">Website</label><br /><input type="text" id="website" name="website" tabindex="-1" autocomplete="false" value="" /></div>
-						  <div>
-						    <input type="submit" class="button" value="SUBMIT" data-drip-attribute="sign-up-button" />
-						  </div>
-						</form>
+						<div class="formwide-one"><?php echo do_shortcode('[gravityform id="9" title="true" description="false"]'); ?></div>
 						<p class="center small padtop15">Subscribing indicates your consent to our <a href="/terms" target="_blank" class="blacklink underline">Terms of Use</a> &amp; <a href="/privacy" target="_blank" class="blacklink underline">Privacy Policy.</a></p>
 					</div>
 				</div><!--col end -->

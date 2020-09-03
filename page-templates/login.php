@@ -43,7 +43,7 @@ $postid = get_the_ID();
 												<div class="whitesection" style="padding: 40px 40px 50px;">
 													<?php the_content(); ?>
 													<div class="padtop30">
-														<a href="https://beingboss.club/register" class="button-pink">Not a member?</a>
+														<a href="https://community.beingboss.club" class="button-pink">Looking for the Community?</a>
 													</div>
 												</div>
 											</div>
